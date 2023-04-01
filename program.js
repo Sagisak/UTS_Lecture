@@ -10,6 +10,8 @@ function changeSlide(n) {
   showSlide(slideIndex += n);
 }
 
+function 
+
 function showSlide(n) {
   const slides = document.getElementsByClassName("slideshow-image");
   if (n > slides.length) { slideIndex = 1 }
