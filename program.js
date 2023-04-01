@@ -10,7 +10,6 @@ function changeSlide(n) {
   showSlide(slideIndex += n);
 }
 
-function 
 
 function showSlide(n) {
   const slides = document.getElementsByClassName("slideshow-image");
@@ -37,7 +36,7 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 // SELESAI DISINI! HEHE
 
 function info(){
-    
+    pet = document.getElementById("petName").value;
 }
 
 function gameplay(){
