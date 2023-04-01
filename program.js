@@ -45,6 +45,7 @@ function info(){
 var nama = info();
 
 function nama(){
+  const now = new Date();
   const hours = now.getHour();
   const minute = now.getMinute();
   const timestring = " " + hours + minutes ;
