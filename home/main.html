@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project UMNGotcha</title>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+    <!-- AVATAR SELECTOR -->
+    
+    <div id="logo">
+        <a>
+            <img src="images/logo.jpg">
+        </a>
+        <a>
+            <h1><center>UMNGotcha</center></h1>
+            <hr />
+        </a>
+	</div>
+    
+    <br />
+    <br />
+    <br />
+
+		<div id="menu">
+			<button type="button" class="btn" id="prevBtn" onclick="changeSlide(-1)"><</></button>
+            <!--img src="images/avatar1.png"--> 
+
+            <div class="slideshow-image">
+                <img src="images/avatar1.png" alt="image 1">
+            </div>
+
+            <div class="slideshow-image">
+                <img src="images/avatar2.png" alt="image 2">
+            </div>
+
+            <div class="slideshow-image">
+                <img src="images/avatar3.png" alt="image 3">
+            </div>
+
+            <div class="slideshow-image">
+                <img src="images/avatar4.png" alt="image 4">
+            </div>
+
+
+			<!-- ini kalau pencet kiri atau kanan, ganti avatar1 ke avatar2 avatar3-->
+			<button type="button" class="btn" id="nextBtn" onclick="changeSlide(1)">></button>
+		</div>
+        <!--------------------->
+        <div id="gameplay">
+
+        </div>
+
+        <br />
+        <br />
+    <br />
+
+    <div id="boxInput">
+        <a>
+            <p>enter pet name here</p>
+        </a>
+        <a>
+            <input type="text" id="petName" name="pet">
+        </a>
+			<br>
+        <a href="game.html">
+            <button type="button" onclick="info()">play</button>
+        </a>
+    </div>
+
+    <script src="UTS_LECTURE/program.js" type="text/javascript"></script> 
+</body>
+</html>
