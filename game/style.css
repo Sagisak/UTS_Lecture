@@ -18,12 +18,36 @@ body {
     background-color: #ddd;;
 }
 
-#sisa {
-    width: 300px;
+#sisa1 {
+    width: 190px;
     height: 30px;
     background-color: #04AA6D;
     border: 3px solid black;
-    border-radius: 4px;
+    
+}
+
+#sisa2 {
+    width: 190px;
+    height: 30px;
+    background-color: #04AA6D;
+    border: 3px solid black;
+    
+}
+
+#sisa3 {
+    width: 190px;
+    height: 30px;
+    background-color: #04AA6D;
+    border: 3px solid black;
+    
+}
+
+#sisa4 {
+    width: 190px;
+    height: 30px;
+    background-color: #04AA6D;
+    border: 3px solid black;
+    
 }
 
 #logo img{
