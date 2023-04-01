@@ -121,10 +121,10 @@ function statusbar(){
   var i =0;
   sisa = document.getElementById("sisa");
   width = 190;
-  var id = setInterval(frame, 100);
+  var id = setInterval(framekurang, 100); 
 }
 
-function frame(){
+function framekurang(){
   if (width <= 0){
     clearInterval(id);
     i = 0;
@@ -133,6 +133,17 @@ function frame(){
     sisa.style.width = width + "px";
   }
 }
+
+function framtambah(){
+  if (width <= 0){
+    clearInterval(id);
+    i = 0;
+  } else {
+    width+= 20;
+    sisa.style.width = width + "px";
+  }
+}
+
 
 function level(){
   if (time == 180){
@@ -145,5 +156,11 @@ function level(){
     new_level = document.getElementById("level").innerHTML = "the dead!";
   }
 
+}
+
+function eating(){
+  var id = setinterval(framekurang){
+    
+  }
 }
 
