@@ -1,5 +1,8 @@
 // FUNCTION UNTUK SLIDE SLIDE GG GIMANK!
 
+time = 0;
+lv = 1
+
 let slideIndex = 1;
 showSlide(slideIndex);
 
@@ -107,4 +110,17 @@ function frame(){
     width--;
     sisa.style.width = width + "px";
   }
+}
+
+function level(){
+  if (time == 180){
+      lv += 1;
+      new_level = document.getElementById("level").innerHTML ="level " + lv;
+  } else if (time == 360){
+    lv += 1;
+    new_level = document.getElementById("level").innerHTML ="level " + lv;
+  } else if (time == 720){
+    new_level = document.getElementById("level").innerHTML = "the dead!";
+  }
+
 }
