@@ -48,19 +48,35 @@ function picture(){
   switch(slideIndex){
     case 1:
       pic = document.getElementById("avatar1").src;
-      
+      avatar = document.getElementById("avatar");
+      tagimg = document.createElement(tagname="img");
+      tagimg.src = pic;
+
+      avatar.appendChild(tagimg);
       break;
     case 2:
-      pic = document.getElementById("avatar1").src;
+      pic = document.getElementById("avatar2").src;
+      avatar = document.getElementById("avatar");
+      tagimg = document.createElement(tagname="img");
+      tagimg.src = pic;
 
+      avatar.appendChild(tagimg);
       break;
     case 3:
-      pic = document.getElementById("avatar1").src;
+      pic = document.getElementById("avatar3").src;
+      avatar = document.getElementById("avatar");
+      tagimg = document.createElement(tagname="img");
+      tagimg.src = pic;
 
+      avatar.appendChild(tagimg);
       break;
     case 4:
-      pic = document.getElementById("avatar1").src;
+      pic = document.getElementById("avatar4").src;
+      avatar = document.getElementById("avatar");
+      tagimg = document.createElement(tagname="img");
+      tagimg.src = pic;
 
+      avatar.appendChild(tagimg);
       break;
   }
 }
