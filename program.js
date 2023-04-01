@@ -47,8 +47,9 @@ var nama = info();
 function name(){
   const hours = now.getHour();
   const minute = now.getMinute();
+  const timestring = ${hours}:${minutes};
   while(1){
-    
+    time = getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
       introduce = getElementById("nama").innerHTML="good morning "+ nama;
     } else if (hours >= 12 && hour < 5){
