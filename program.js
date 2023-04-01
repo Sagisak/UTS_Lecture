@@ -89,15 +89,15 @@ function nama(){
   const now = new Date();
   const hours = now.getHours();
   const minute = now.getMinutes();
-  const timestring = " " + hours + minute ;
+  const timestring = `${hours} : ${minute}` ;
   while(1){
     time = document.getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
       introduce = document.getElementById("nama").innerHTML="good morning "+ nama;
     } else if (hours >= 12 && hours  < 5){
-      introduce = document.getElementByID("nama").innerHTML="good afternoon " + nama;
+      introduce = document.getElementById("nama").innerHTML="good afternoon " + nama;
     } else {
-      introduce = document.getElementByID("nama").innerHTML="good evening " + nama;
+      introduce = document.getElementById("nama").innerHTML="good evening " + nama;
     }
     
   }
@@ -231,7 +231,7 @@ function sleeping(){
 }
 
 function bath(){
-  sisa2.style.width = width + "px"; //bath
+  
   var id2 = setInterval(frametambahMandi, 1);
 }
 
