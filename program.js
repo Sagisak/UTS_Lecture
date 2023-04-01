@@ -3,6 +3,8 @@
 time = 0;
 lv = 1
 
+
+
 let slideIndex = 1;
 showSlide(slideIndex);
 
@@ -43,12 +45,25 @@ function info(){
 var nama = info();
 
 function name(){
-  introduce = getElementById("nama").innerHTML="good morning "+ nama;
+  const hours = now.getHour();
+  const minute = now.getMinute();
+  const timestring = ${hours}:${minutes};
+  while(1){
+    time = getElementById("time").innerHTML=" " + timestring;
+    if (hours >= 0 && hours < 12){
+      introduce = getElementById("nama").innerHTML="good morning "+ nama;
+    } else if (hours >= 12 && hour < 5){
+      introduce = getElementByID("nama").innerHTML="good afternoon " + nama;
+    } else {
+      introduce = getElementByID("nama").innerHTML="good evening " + nama;
+    }
+    
+  }
+  
 }
 
-function gameplay(){
-    level = getElementById(level).index.HTML = ""
-}
+
+
 
 function game(){
     j = 3;
