@@ -159,10 +159,10 @@ function game(){
 
 function statusbar(){
   var i =0;
-  sisa1 = document.getElementById("sisa1");
-  sisa2 = document.getElementById("sisa2");
-  sisa3 = document.getElementById("sisa3");
-  sisa4 = document.getElementById("sisa4");
+  sisa1 = document.getElementById("sisa1"); //play
+  sisa2 = document.getElementById("sisa2"); //bath
+  sisa3 = document.getElementById("sisa3"); //sleep
+  sisa4 = document.getElementById("sisa4"); //eat
   width = 190;
   var id = setInterval(framekurang, 100); 
 }
@@ -173,22 +173,35 @@ function framekurang(){
     i = 0;
   } else {
     width--;
-    sisa1.style.width = width + "px";
-    sisa2.style.width = width + "px";
-    sisa3.style.width = width + "px";
-    sisa4.style.width = width + "px";
+    sisa1.style.width = width + "px"; //play
+    sisa2.style.width = width + "px"; //bath
+    sisa3.style.width = width + "px"; //sleep
+    sisa4.style.width = width + "px"; //eat
   }
 }
 
-function framtambah(){
-  if (width <= 0){
-    clearInterval(id);
-    i = 0;
-  } else {
+function framtambahMakan(){
     width+= 20;
-    sisa.style.width = width + "px";
-  }
+    sisa4.style.width = width + "px";
 }
+
+function framtambahTidur(){
+  width+= 20;
+  sisa4.style.width = width + "px";
+}
+
+function framtambahMain(){
+  width+= 20;
+  sisa4.style.width = width + "px";
+}
+
+function framtambahMandi(){
+  width+= 20;
+  sisa4.style.width = width + "px";
+}
+
+
+
 
 
 function level(){
@@ -205,6 +218,23 @@ function level(){
 }
 
 function eating(){
-  var id = setinterval(framekurang)
+  sisa4 = document.getElementById("sisa4");
+  var id = setinterval(framekurang);
+  var id2 = setinterval(frametambahMakan, 1);
+}
+
+function sleeping(){
+  sisa3 = document.getElementById("sisa3"); //sleep
+  var id2 = setInterval(frametambahTidur, 1);
+}
+
+function bath(){
+  sisa2.style.width = width + "px"; //bath
+  var id2 = setInterval(frametambahMandi, 1);
+}
+
+function play(){
+  sisa1 = document.getElementById("sisa1");   
+  var id2 = setInterval(frametambahMain, 1);
 }
 
