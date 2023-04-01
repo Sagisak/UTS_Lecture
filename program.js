@@ -44,6 +44,8 @@ function info(){
     return pet;
 }
 
+var nama = info();
+
 function picture(){
   switch(slideIndex){
     case 1:
@@ -81,7 +83,7 @@ function picture(){
   }
 }
 
-var nama = info();
+
 
 function nama(){
   const now = new Date();
@@ -89,13 +91,13 @@ function nama(){
   const minute = now.getMinutes();
   const timestring = " " + hours + minute ;
   while(1){
-    time = getElementById("time").innerHTML=" " + timestring;
+    time = document.getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
-      introduce = getElementById("nama").innerHTML="good morning "+ nama;
+      introduce = document.getElementById("nama").innerHTML="good morning "+ nama;
     } else if (hours >= 12 && hours  < 5){
-      introduce = getElementByID("nama").innerHTML="good afternoon " + nama;
+      introduce = document.getElementByID("nama").innerHTML="good afternoon " + nama;
     } else {
-      introduce = getElementByID("nama").innerHTML="good evening " + nama;
+      introduce = document.getElementByID("nama").innerHTML="good evening " + nama;
     }
     
   }
