@@ -1,6 +1,6 @@
 body {
     font-family: cursive;
-    background-color: salmon ;
+    background-color: rgb(255, 255, 255) ;
 }
   
 #status{
@@ -17,14 +17,16 @@ body {
 
 #progress {
     width:200px;
-    background-color: #ffffff;;
+    background-color: #ffffff;
+    border: 3px solid black;
+    border-radius: 7px;
 }
 
 #sisa1 {
     width: 190px;
     height: 30px;
     background-color: #04AA6D;
-    border: 3px solid black;
+
     border-radius: 7px;
 }
 
@@ -32,7 +34,7 @@ body {
     width: 190px;
     height: 30px;
     background-color: #04AA6D;
-    border: 3px solid black;
+
     border-radius: 7px;
 }
 
@@ -40,7 +42,7 @@ body {
     width: 190px;
     height: 30px;
     background-color: #04AA6D;
-    border: 3px solid black;
+
     border-radius: 7px;
 }
 
@@ -48,7 +50,7 @@ body {
     width: 190px;
     height: 30px;
     background-color: #04AA6D;
-    border: 3px solid black;
+
     border-radius: 7px;
 }
 
@@ -94,7 +96,7 @@ body {
 .button:hover {
     background-color: #d4ff00;
     cursor: pointer;
-    transform: scale(105%);
+    transform: scale(120%);
 }
 
 footer {
