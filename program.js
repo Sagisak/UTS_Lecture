@@ -47,7 +47,7 @@ var nama = info();
 function name(){
   const hours = now.getHour();
   const minute = now.getMinute();
-  const timestring = ${hours}:${minutes};
+  const timestring = " " + hours + minutes ;
   while(1){
     time = getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
@@ -61,8 +61,6 @@ function name(){
   }
   
 }
-
-
 
 
 function game(){
