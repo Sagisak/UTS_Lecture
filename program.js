@@ -41,12 +41,14 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 
 // SELESAI DISINI! HEHE
 
+
+
 function info(){
-    var pet = document.getElementById("petName").value;
-    return pet;
+    var NamaPet = document.getElementById("petName").value;
+    localStorage.setItem("nama",NamaPet);
 }
 
- let NamaPet = "matthew";
+ 
 
 function picture(){
   switch(slideIndex){
@@ -94,11 +96,11 @@ function nama(){
   const timestring = `${hours} : ${minute}`;
   time = document.getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
-      introduce = document.getElementById("nama").innerHTML="good morning "+ NamaPet;
+      introduce = document.getElementById("nama").innerHTML="good morning "+ localStorage.getItem("nama");
     } else if (hours >= 12 && hours  < 17){
-      introduce = document.getElementById("nama").innerHTML="good afternoon " + NamaPet;
+      introduce = document.getElementById("nama").innerHTML="good afternoon " + localStorage.getItem("nama");
     } else if (hours >= 17 && hours <= 23) {
-      introduce = document.getElementById("nama").innerHTML="good evening " + NamaPet;
+      introduce = document.getElementById("nama").innerHTML="good evening " + localStorage.getItem("nama");
     }
 
   
