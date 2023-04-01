@@ -46,8 +46,8 @@ var nama = info();
 
 function nama(){
   const now = new Date();
-  const hours = now.getHour();
-  const minute = now.getMinute();
+  const hours = now.getHours();
+  const minute = now.getMinutes();
   const timestring = " " + hours + minutes ;
   while(1){
     time = getElementById("time").innerHTML=" " + timestring;
