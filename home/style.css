@@ -79,22 +79,3 @@ button:hover:after {
     align-items: center;
 }
 
-#status{
-    border:1px solid black;
-    border-collapse: collapse;
-}
-
-#status img{
-    width: 100px;
-}
-
-#progress {
-    width:200px;
-    background-color: #ddd;;
-}
-
-#sisa {
-    width: 190px;
-    height: 30px;
-    background-color: #04AA6D;
-}
