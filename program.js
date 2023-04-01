@@ -48,12 +48,12 @@ function nama(){
   const now = new Date();
   const hours = now.getHours();
   const minute = now.getMinutes();
-  const timestring = " " + hours + minutes ;
+  const timestring = " " + hours + minute ;
   while(1){
     time = getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
       introduce = getElementById("nama").innerHTML="good morning "+ nama;
-    } else if (hours >= 12 && hour < 5){
+    } else if (hours >= 12 && hours < 5){
       introduce = getElementByID("nama").innerHTML="good afternoon " + nama;
     } else {
       introduce = getElementByID("nama").innerHTML="good evening " + nama;
