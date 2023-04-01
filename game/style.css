@@ -61,39 +61,44 @@ body {
 
 .button-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+
 }
 
 .button-container button{
-    width: 100px;
+    width: auto;
+    
 }
 
 #button-act{
     align-self: center;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
+    
 }
   
 .button {
-    padding: 10px 20px;
+    padding: 10px 100px;
     border: 2px solid #000;
-    background-color: #fff;
-    border-radius: 3px;
-    font-size: 16px;
+    background-color: #ffb4fe;
+    border-radius: 7px;
+    font-size: 20px;
     font-family: cursive;
     color: solid black;
     transition: background-color ease-in-out;
-  
-  }
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+    
+}
   
 .button:hover {
     background-color: #ff98f3;
     cursor: pointer;
     transform: scale(105%);
-  }
+}
 
 footer {
     margin-top: 40px;
     border-top: 2px solid black;    
-    }
+}
   
   
