@@ -46,7 +46,7 @@ function info(){
     return pet;
 }
 
-var nama = info();
+ let NamaPet = "matthew";
 
 function picture(){
   switch(slideIndex){
@@ -91,16 +91,16 @@ function nama(){
   const now = new Date();
   const hours = now.getHours();
   const minute = now.getMinutes();
-  const timestring = `${hours} : ${minute}` 
+  const timestring = `${hours} : ${minute}`;
   time = document.getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
-      introduce = document.getElementById("nama").innerHTML="good morning "+ nama;
-    } else if (hours >= 12 && hours  < 5){
-      introduce = document.getElementById("nama").innerHTML="good afternoon " + nama;
-    } else {
-      introduce = document.getElementById("nama").innerHTML="good evening " + nama;
+      introduce = document.getElementById("nama").innerHTML="good morning "+ NamaPet;
+    } else if (hours >= 12 && hours  < 17){
+      introduce = document.getElementById("nama").innerHTML="good afternoon " + NamaPet;
+    } else if (hours >= 17 && hours <= 23) {
+      introduce = document.getElementById("nama").innerHTML="good evening " + NamaPet;
     }
-    
+
   
 }
 
