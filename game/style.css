@@ -3,7 +3,8 @@ body {
 }
   
 #status{
-    border:none;
+    border: 3px solid black;
+    border-collapse: collapse;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -14,38 +15,11 @@ body {
 }
 
 #progress {
-    width:205px;
-    background-color: #ffffff;
+    width:200px;
+    background-color: #ddd;;
 }
 
 #sisa1 {
-<<<<<<< HEAD
-    width: 190px;
-    height: 30px;
-    background-color: #04AA6D;
-    border: 3px solid black;
-    
-}
-
-#sisa2 {
-    width: 190px;
-    height: 30px;
-    background-color: #04AA6D;
-    border: 3px solid black;
-    
-}
-
-#sisa3 {
-    width: 190px;
-    height: 30px;
-    background-color: #04AA6D;
-    border: 3px solid black;
-    
-}
-
-#sisa4 {
-=======
->>>>>>> 7d3926a29894c7cbe85f2c1f8aef91ed4e3c6b65
     width: 190px;
     height: 30px;
     background-color: #04AA6D;
@@ -76,6 +50,7 @@ body {
     border: 3px solid black;
     
 }
+
 
 #logo img{
     width: 150px;
@@ -118,6 +93,6 @@ body {
 footer {
     margin-top: 40px;
     border-top: 2px solid black;    
-}
+    }
   
   
