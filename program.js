@@ -87,12 +87,15 @@ function picture(){
   }
 }
 
-
+function addZero(i) {
+  if (i<10) {i = "0" + i};
+  return i;
+}
 
 function nama(){
   const now = new Date();
-  const hours = now.getHours();
-  const minute = now.getMinutes();
+  const hours = addZero(now.getHours());
+  const minute = addZero(now.getMinutes());
   const timestring = `${hours} : ${minute}`;
   time = document.getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
@@ -105,6 +108,8 @@ function nama(){
 
   
 }
+
+
 
 
 
