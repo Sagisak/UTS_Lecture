@@ -3,12 +3,15 @@
 time = 0;
 lv = 1
 
+
+
 let slideIndex = 1;
 showSlide(slideIndex);
 
 function changeSlide(n) {
   showSlide(slideIndex += n);
 }
+
 
 function showSlide(n) {
   const slides = document.getElementsByClassName("slideshow-image");
@@ -35,12 +38,30 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 // SELESAI DISINI! HEHE
 
 function info(){
-    
+    var pet = document.getElementById("petName").value;
+    return pet;
 }
 
-function gameplay(){
-    level = getElementById(level).index.HTML = ""
+var nama = info();
+
+function name(){
+  const hours = now.getHour();
+  const minute = now.getMinute();
+  const timestring = " " + hours + minutes ;
+  while(1){
+    time = getElementById("time").innerHTML=" " + timestring;
+    if (hours >= 0 && hours < 12){
+      introduce = getElementById("nama").innerHTML="good morning "+ nama;
+    } else if (hours >= 12 && hour < 5){
+      introduce = getElementByID("nama").innerHTML="good afternoon " + nama;
+    } else {
+      introduce = getElementByID("nama").innerHTML="good evening " + nama;
+    }
+    
+  }
+  
 }
+
 
 function game(){
     j = 3;
