@@ -36,7 +36,14 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 // SELESAI DISINI! HEHE
 
 function info(){
-    pet = document.getElementById("petName").value;
+    var pet = document.getElementById("petName").value;
+    return pet;
+}
+
+var nama = info();
+
+function name(){
+  introduce = getElementById("nama").innerHTML="good morning "+ nama;
 }
 
 function gameplay(){
