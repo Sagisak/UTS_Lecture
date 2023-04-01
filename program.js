@@ -23,6 +23,8 @@ function showSlide(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
+
+
 /*
 
 document.getElementById("prevBtn").addEventListener("click", () => {
@@ -42,17 +44,55 @@ function info(){
     return pet;
 }
 
+function picture(){
+  switch(slideIndex){
+    case 1:
+      pic = document.getElementById("avatar1").src;
+      avatar = document.getElementById("avatar");
+      tagimg = document.createElement(tagname="img");
+      tagimg.src = pic;
+
+      avatar.appendChild(tagimg);
+      break;
+    case 2:
+      pic = document.getElementById("avatar2").src;
+      avatar = document.getElementById("avatar");
+      tagimg = document.createElement(tagname="img");
+      tagimg.src = pic;
+
+      avatar.appendChild(tagimg);
+      break;
+    case 3:
+      pic = document.getElementById("avatar3").src;
+      avatar = document.getElementById("avatar");
+      tagimg = document.createElement(tagname="img");
+      tagimg.src = pic;
+
+      avatar.appendChild(tagimg);
+      break;
+    case 4:
+      pic = document.getElementById("avatar4").src;
+      avatar = document.getElementById("avatar");
+      tagimg = document.createElement(tagname="img");
+      tagimg.src = pic;
+
+      avatar.appendChild(tagimg);
+      break;
+  }
+}
+
 var nama = info();
 
-function name(){
-  const hours = now.getHour();
-  const minute = now.getMinute();
-  const timestring = " " + hours + minutes ;
+function nama(){
+  const now = new Date();
+  const hours = now.getHours();
+  const minute = now.getMinutes();
+  const timestring = " " + hours + minute ;
   while(1){
     time = getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
       introduce = getElementById("nama").innerHTML="good morning "+ nama;
-    } else if (hours >= 12 && hour < 5){
+    } else if (hours >= 12 && hours  < 5){
       introduce = getElementByID("nama").innerHTML="good afternoon " + nama;
     } else {
       introduce = getElementByID("nama").innerHTML="good evening " + nama;
