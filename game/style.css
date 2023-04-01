@@ -105,3 +105,9 @@ footer {
     border-top: 2px solid black;    
 }
 
+hr {
+    height: 2px;
+    background-color: black;
+    border: none;
+  }
+  
