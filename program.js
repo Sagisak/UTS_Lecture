@@ -45,7 +45,7 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 
 function info(){
     var NamaPet = document.getElementById("petName").value;
-    return NamaPet;
+    localStorage.setItem("nama",NamaPet);
 }
 
  
@@ -90,18 +90,17 @@ function picture(){
 
 
 function nama(){
-  localStorage.namaPet('matthew');
   const now = new Date();
   const hours = now.getHours();
   const minute = now.getMinutes();
   const timestring = `${hours} : ${minute}`;
   time = document.getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
-      introduce = document.getElementById("nama").innerHTML="good morning "+ localStorage.namaPet;
+      introduce = document.getElementById("nama").innerHTML="good morning "+ localStorage.getItem("nama");
     } else if (hours >= 12 && hours  < 17){
-      introduce = document.getElementById("nama").innerHTML="good afternoon " + localStorage.namaPet;
+      introduce = document.getElementById("nama").innerHTML="good afternoon " + localStorage.getItem("nama");
     } else if (hours >= 17 && hours <= 23) {
-      introduce = document.getElementById("nama").innerHTML="good evening " + localStorage.namaPet;
+      introduce = document.getElementById("nama").innerHTML="good evening " + localStorage.getItem("nama");
     }
 
   
