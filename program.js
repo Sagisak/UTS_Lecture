@@ -89,9 +89,9 @@ function nama(){
   const now = new Date();
   const hours = now.getHours();
   const minute = now.getMinutes();
-  const timestring = `${hours} : ${minute}` ;
+  const timestring = `${hours} : ${minute}` 
+  time = document.getElementById("time").innerHTML=" " + timestring;
   while(1){
-    time = document.getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
       introduce = document.getElementById("nama").innerHTML="good morning "+ nama;
     } else if (hours >= 12 && hours  < 5){
