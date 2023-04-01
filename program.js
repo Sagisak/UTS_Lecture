@@ -23,6 +23,8 @@ function showSlide(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
+
+
 /*
 
 document.getElementById("prevBtn").addEventListener("click", () => {
@@ -42,6 +44,27 @@ function info(){
     return pet;
 }
 
+function picture(){
+  switch(slideIndex){
+    case 1:
+      pic = document.getElementById("avatar1").src;
+      
+      break;
+    case 2:
+      pic = document.getElementById("avatar1").src;
+
+      break;
+    case 3:
+      pic = document.getElementById("avatar1").src;
+
+      break;
+    case 4:
+      pic = document.getElementById("avatar1").src;
+
+      break;
+  }
+}
+
 var nama = info();
 
 function nama(){
@@ -53,7 +76,7 @@ function nama(){
     time = getElementById("time").innerHTML=" " + timestring;
     if (hours >= 0 && hours < 12){
       introduce = getElementById("nama").innerHTML="good morning "+ nama;
-    } else if (hours >= 12 && hours < 5){
+    } else if (hours >= 12 && hours  < 5){
       introduce = getElementByID("nama").innerHTML="good afternoon " + nama;
     } else {
       introduce = getElementByID("nama").innerHTML="good evening " + nama;
