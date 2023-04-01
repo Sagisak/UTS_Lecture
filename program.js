@@ -252,10 +252,15 @@ function play(){
   var id2 = setInterval(frametambahMain, 1);
 }
 
-var buttonSound = document.getElementById("button-sound");
-var myButton = document.getElementsByClassName("button-container");
+
+
+function sound(){
+  var buttonSound = document.getElementById("button-sound");
+  var myButton = document.getElementsByClassName("button-container");
 
 myButton.addEventListener("click", function() {
   buttonSound.currentTime = 0;
   buttonSound.play();
 });
+}
+
