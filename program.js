@@ -159,8 +159,6 @@ function level(){
 }
 
 function eating(){
-  var id = setinterval(framekurang){
-    
-  }
+  var id = setinterval(framekurang)
 }
 
