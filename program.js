@@ -177,7 +177,7 @@ function statusbar(){
   sisa2 = document.getElementById("sisa2"); //bath
   sisa3 = document.getElementById("sisa3"); //sleep
   sisa4 = document.getElementById("sisa4"); //eat
-  width = 190;
+  width = 200;
   var id = setInterval(framekurang, 100); 
 }
 
