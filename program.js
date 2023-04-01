@@ -108,3 +108,7 @@ function frame(){
     sisa.style.width = width + "px";
   }
 }
+
+function level(){
+  if 
+}
