@@ -97,13 +97,18 @@ function nama(){
   const hours = addZero(now.getHours());
   const minute = addZero(now.getMinutes());
   const timestring = `${hours} : ${minute}`;
-  time = document.getElementById("time").innerHTML=" " + timestring;
+  time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
+  time = document.getElementById("time").style.fontWeight='bold';
     if (hours >= 0 && hours < 12){
-      introduce = document.getElementById("nama").innerHTML="good morning "+ localStorage.getItem("nama");
+      introduce = document.getElementById("nama").innerHTML="<center>good morning "+ localStorage.getItem("nama") + "</center>";
+      introduce =  document.getElementById("nama").style.fontFamily='Arial';
+      introduce =  document.getElementById("nama").style.fontWeight='bold';
     } else if (hours >= 12 && hours  < 17){
       introduce = document.getElementById("nama").innerHTML="good afternoon " + localStorage.getItem("nama");
     } else if (hours >= 17 && hours <= 23) {
       introduce = document.getElementById("nama").innerHTML="good evening " + localStorage.getItem("nama");
+      introduce =  document.getElementById("nama").style.fontFamily='Arial';
+      introduce =  document.getElementById("nama").style.fontWeight='bold';
     }
 
   
