@@ -3,17 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 /**************/
 
+/*
+#f38e36
+#265158
+#63a99e
+#9fddd2
+#c5f0e9
+*/
+
 .body {
-    background-color: rgb(80, 207, 69);
     font-family:arial;
     margin: 0;
 }
 
 #header {
-    background-color: #78bcff;
     font-family: 'Delicious Handrawn', cursive;
     height: 10em;
-    margin: 0;
+    background: linear-gradient(to bottom, #3c828d 0%, #63a99e 100%);
 }
 
 #header img{
@@ -36,7 +42,10 @@
     display:flex;
     flex-direction: row;
     justify-content: center;
-    /*border: 4px solid black;*/
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background: linear-gradient(to bottom, #63a99e 0%, #9fddd2 100%);
     
 }
 
@@ -51,6 +60,7 @@
     width: 20em;
     object-fit: cover;
 }
+
 
 /*Ini untuk button!*/
 .btn {
@@ -95,12 +105,47 @@ button:hover:after {
 }
 /*END*/
 
+/*
 #boxInput{
     display:flex;
     flex-direction:column;
-    justify-content: space-between;
     align-items: center;
     font-family: 'Delicious Handrawn', cursive;
     font-size: 1.5em;
+    border: 4px solid green;
 }
 
+#boxInput a{
+    display:flex;
+    border: 4px solid blue;
+    width:20%;
+    height: 2em;
+}
+*/
+
+#boxInput {
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin: 0em auto;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    background: linear-gradient(to bottom, #9fddd2 0%, #ffffff 100%);
+    height: 10em;
+}
+
+#boxInput a {
+    margin: 0.4em auto;
+}
+
+#boxInput input[type="text"] {
+    border: 4px solid yellow;
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
