@@ -119,7 +119,10 @@ function game(){
 
 function statusbar(){
   var i =0;
-  sisa = document.getElementById("sisa");
+  sisa1 = document.getElementById("sisa1");
+  sisa2 = document.getElementById("sisa2");
+  sisa3 = document.getElementById("sisa3");
+  sisa4 = document.getElementById("sisa4");
   width = 190;
   var id = setInterval(framekurang, 100); 
 }
@@ -130,7 +133,10 @@ function framekurang(){
     i = 0;
   } else {
     width--;
-    sisa.style.width = width + "px";
+    sisa1.style.width = width + "px";
+    sisa2.style.width = width + "px";
+    sisa3.style.width = width + "px";
+    sisa4.style.width = width + "px";
   }
 }
 
