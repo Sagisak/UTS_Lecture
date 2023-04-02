@@ -215,20 +215,27 @@ function statusbar(){
   sisa2 = document.getElementById("sisa2"); //bath
   sisa3 = document.getElementById("sisa3"); //sleep
   sisa4 = document.getElementById("sisa4"); //eat
-  width = 200;
-  var id = setInterval(framekurang, 100); 
+  width1 = 200;
+  width2 = 200;
+  width3 = 200;
+  width4 = 200;
+  var id = setInterval(framekurang, 1000); 
 }
 
 function framekurang(){
-  if (width <= 0){
+  if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
     clearInterval(id);
-    i = 0;
+    // i = 0;
   } else {
-    width--;
-    sisa1.style.width = width + "px"; //play
-    sisa2.style.width = width + "px"; //bath
-    sisa3.style.width = width + "px"; //sleep
-    sisa4.style.width = width + "px"; //eat
+    width1--;
+    width2--;
+    width3--;
+    width4--;
+
+    sisa1.style.width = width1 + "px"; //play
+    sisa2.style.width = width2 + "px"; //bath
+    sisa3.style.width = width3 + "px"; //sleep
+    sisa4.style.width = width4 + "px"; //eat
   }
 }
 
@@ -252,31 +259,31 @@ function level(){
 
 function eating(){
   sisa4 = document.getElementById("sisa4");
-  width+= 20;
-  sisa4.style.width = width + "px";
+  width4+= 20;
+  sisa4.style.width = width4 + "px";
   return;
 }
 
 function sleeping(){
   sisa3 = document.getElementById("sisa3"); //sleep
-  width+= 20;
-  sisa3.style.width = width + "px";
+  width3+= 20;
+  sisa3.style.width = width3 + "px";
 
   return;
 }
 
 function bath(){
   sisa2 = document.getElementById("sisa2"); //bath
-  width+= 20;
-  sisa2.style.width = width + "px";
+  width2+= 20;
+  sisa2.style.width = width2 + "px";
 
   return;
 }
 
 function play(){
   sisa1 = document.getElementById("sisa1");   
-  width+= 20;
-  sisa1.style.width = width + "px";
+  width1+= 20;
+  sisa1.style.width = width1 + "px";
 
   return;
 }
