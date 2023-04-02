@@ -234,6 +234,12 @@ function statusbar(){
   width3 = 150;
   width4 = 150;
   var id = setInterval(framekurang, 3000); 
+
+  if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
+    clearInterval(id);
+    alert("Pet Meninggoy!");
+  }
+
 }
 
 // function framekurang(){
@@ -299,6 +305,9 @@ function eating(){
 
   width2-= 10;
   sisa2.style.width = width2 + "px";
+
+  width1-= 10;
+  sisa1.style.width = width1 + "px";
   return;
 }
 
