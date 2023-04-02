@@ -52,33 +52,36 @@ function picture(){
   switch(slideIndex){
     case 1:
       pic = document.getElementById("avatar1").src;
+      localStorage.setItem("pet", pic);
       avatar = document.getElementById("avatar");
       tagimg = document.createElement(tagname="img");
-      tagimg.src = pic;
+      tagimg.src = localStorage.getItem("pet");
 
       avatar.appendChild(tagimg);
       break;
     case 2:
       pic = document.getElementById("avatar2").src;
-      avatar = document.getElementById("avatar");
+      localStorage.setItem("pet", pic);
       tagimg = document.createElement(tagname="img");
-      tagimg.src = pic;
+      tagimg.src = localStorage.getItem("pet");
 
       avatar.appendChild(tagimg);
       break;
     case 3:
       pic = document.getElementById("avatar3").src;
+      localStorage.setItem("pet", pic);
       avatar = document.getElementById("avatar");
       tagimg = document.createElement(tagname="img");
-      tagimg.src = pic;
+      tagimg.src = localStorage.getItem("pet");
 
       avatar.appendChild(tagimg);
       break;
     case 4:
       pic = document.getElementById("avatar4").src;
+      localStorage.setItem("pet", pic);
       avatar = document.getElementById("avatar");
       tagimg = document.createElement(tagname="img");
-      tagimg.src = pic;
+      tagimg.src = localStorage.getItem("pet");
 
       avatar.appendChild(tagimg);
       break;
