@@ -141,17 +141,20 @@ function nama(){
     time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
     time = document.getElementById("time").style.fontWeight='bold';
     if (hours >= 0 && hours < 12){
-      introduce = document.getElementById("nama").innerHTML="<center>Good Morning "+ localStorage.getItem("nama") + "</center>";
+      introduce = document.getElementById("nama").innerHTML="<center>Good Morning, "+ localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
+      introduce =  document.getElementById("nama").style.fontSize='50px';
     } else if (hours >= 12 && hours  < 17){
-      introduce = document.getElementById("nama").innerHTML="<center>Good Afternoon " + localStorage.getItem("nama") + "</center>";
+      introduce = document.getElementById("nama").innerHTML="<center>Good Afternoon, " + localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
+      introduce =  document.getElementById("nama").style.fontSize='50px';
     } else if (hours >= 17 && hours <= 23) {
-      introduce = document.getElementById("nama").innerHTML="<center>Good Evening " + localStorage.getItem("nama") + "</center>";
+      introduce = document.getElementById("nama").innerHTML="<center>Good Evening, " + localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
+      introduce =  document.getElementById("nama").style.fontSize='50px';
     }
     
   }
