@@ -248,7 +248,7 @@ function statusbar(){
   width2 = 150;
   width3 = 150;
   width4 = 150;
-  id = setInterval(framekurang, 100); 
+  id = setInterval(framekurang, 8000); 
   
 }
 
