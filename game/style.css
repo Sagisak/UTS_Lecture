@@ -14,14 +14,18 @@ body {
 }
 
 #logo img{
-    
+    width: 150px;
+    display:flex;
+    margin-left:auto;
+    margin-right: auto;
     border-radius: 50%;
-
 }
 
+#logo h1{
+    padding-bottom: 100px;
+}
 
-
-
+ 
 #status img{
     width: 30px;
     padding: 10px;
@@ -74,13 +78,10 @@ td{
     border: none;
 }
 
-
-#logo img{
-    width: 150px;
-    display:flex;
-    margin-left:auto;
-    margin-right: auto;
+#avatar{
+    margin-left: auto;
 }
+
 
 .button-container {
     display: flex;
@@ -126,3 +127,4 @@ footer {
     text-align: center;
     padding: 1px;
 }
+
