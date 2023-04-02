@@ -229,7 +229,6 @@ function framekurang(){
     width3--;
     width4--;
 
-
     sisa1.style.width = width1 + "px"; //play
     sisa2.style.width = width2 + "px"; //bath
     sisa3.style.width = width3 + "px"; //sleep
