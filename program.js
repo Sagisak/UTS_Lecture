@@ -241,13 +241,7 @@ function statusbar(){
   width2 = 150;
   width3 = 150;
   width4 = 150;
-  var id = setInterval(framekurang, 3000); 
-
-  if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
-    clearInterval(id);
-    alert("Pet Meninggoy!");
-  }
-
+  var id = setInterval(framekurang, 100); 
 }
 
 // function framekurang(){
