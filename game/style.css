@@ -119,6 +119,7 @@ hr {
     border: none;
   }
 
+
 /*********** INI CSS BUAT GAME ***********/
   
 #container-game{
@@ -156,3 +157,8 @@ hr {
 }
 
 /********************************************/
+
+time{
+    font-family: 'Times New Roman', Times, serif;
+}
+
