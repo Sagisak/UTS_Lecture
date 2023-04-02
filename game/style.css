@@ -26,31 +26,34 @@ body {
 }
 
 #sisa1 {
-    width: 200px;
+    width: 150px;
     height: 30px;
     background-color: #04AA6D;
     background-color: #04AA6D;
     border-radius: 4px;
+    transition: 0.2s;
 }
 
 #sisa2 {
-    width: 200px;
+    width: 150px;
     height: 30px;
     background-color: #04AA6D;
     background-color: #04AA6D;
     border-radius: 4px;
+    transition: 0.2s;
 }
 
 #sisa3 {
-    width: 200px;
+    width: 150px;
     height: 30px;
     background-color: #04AA6D;
     background-color: #04AA6D;
     border-radius: 4px;
+    transition: 0.2s;
 }
 
 #sisa4 {
-    width: 200px;
+    width: 150px;
     height: 30px;
     background-color: #04AA6D;
     border-radius: 4px;

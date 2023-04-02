@@ -212,14 +212,15 @@ function statusbar(){
   sisa2 = document.getElementById("sisa2"); //bath
   sisa3 = document.getElementById("sisa3"); //sleep
   sisa4 = document.getElementById("sisa4"); //eat
-  width1 = 200;
-  width2 = 200;
-  width3 = 200;
-  width4 = 200;
+  width1 = 150;
+  width2 = 150;
+  width3 = 150;
+  width4 = 150;
   var id = setInterval(framekurang, 1000); 
 }
 
 function framekurang(){
+
   if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
     clearInterval(id);
     // i = 0;
@@ -257,6 +258,13 @@ function level(){
 function eating(){
   sisa4 = document.getElementById("sisa4");
   width4+= 20;
+
+  if(parseInt(sisa4.style.width) >= 200 ){
+    width4 = 200;
+    sisa4.style.width = width4 + 'px';
+    return;
+  }
+
   sisa4.style.width = width4 + "px";
   return;
 }
@@ -264,6 +272,13 @@ function eating(){
 function sleeping(){
   sisa3 = document.getElementById("sisa3"); //sleep
   width3+= 20;
+
+  if(parseInt(sisa3.style.width) >= 200 ){
+    width3 = 200;
+    sisa3.style.width = width3 + 'px';
+    return;
+  }
+
   sisa3.style.width = width3 + "px";
 
   return;
@@ -272,6 +287,13 @@ function sleeping(){
 function bath(){
   sisa2 = document.getElementById("sisa2"); //bath
   width2+= 20;
+
+  if(parseInt(sisa2.style.width) >= 200 ){
+    width2 = 200;
+    sisa2.style.width = width2 + 'px';
+    return;
+  }
+
   sisa2.style.width = width2 + "px";
 
   return;
@@ -280,6 +302,13 @@ function bath(){
 function play(){
   sisa1 = document.getElementById("sisa1");   
   width1+= 20;
+
+  if(parseInt(sisa1.style.width) >= 200 ){
+    width1 = 200;
+    sisa1.style.width = width1 + 'px';
+    return;
+  }
+
   sisa1.style.width = width1 + "px";
 
   return;
