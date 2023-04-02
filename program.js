@@ -1,15 +1,66 @@
 // FUNCTION UNTUK SLIDE SLIDE GG GIMANK!
 
-
-
-
-
 let slideIndex = 1;
 showSlide(slideIndex);
+counter(slideIndex);
 
 function changeSlide(n) {
   showSlide(slideIndex += n);
+  counter(slideIndex);
 }
+
+function counter(n){
+  if (n > 4){
+    n = 1;
+  } else if (n == 0){
+    n = 4;
+  }
+  id = document.getElementById("test").innerHTML = "1" + n;
+  switch(n){
+    case 1:
+      localStorage.setItem("pet", "1");
+      break;
+    case 2:
+      localStorage.setItem("pet", "2");
+      break;
+    case 3:
+      localStorage.setItem("pet", "3");
+      break;
+    case 4:
+      localStorage.setItem("pet", "4");
+      break;
+    default:
+      localStorage.setItem("pet", "4");
+      break;
+  }
+  id2 = document.getElementById("test2").innerHTML = "1" + localStorage.getItem("pet");
+  }
+
+  function pictureprint(){
+    avatar = document.getElementById("avatar");
+    
+    var dataImage = localStorage.getItem("pet");
+    tagimg = document.createElement(tagname="img");
+    switch(dataImage){
+      case "1":
+        tagimg.src = "/images/avatar1.png";
+        break;
+      case "2":
+        tagimg.src = "/images/avatar2.png";
+        break;
+      case "3":
+        tagimg.src = "/images/avatar3.png";
+        break;
+      case "4":
+        tagimg.src = "/images/avatar4.png";
+        break;
+      default :
+      tagimg.src = "/images/avatar4.png";
+      break;
+  
+    }
+    avatar.appendChild(tagimg);
+  }
 
 
 function showSlide(n) {
@@ -44,56 +95,14 @@ loop = 1;
 function info(){
     var NamaPet = document.getElementById("petName").value;
     localStorage.setItem("nama",NamaPet);
-}
+} 
 
- 
 
-function picture(){
-  switch(slideIndex){
-    case 1:
-      pic = document.getElementById("avatar1").src;
-      localStorage.setItem("pet", pic);
-      avatar = document.getElementById("avatar");
-      tagimg = document.createElement(tagname="img");
-      tagimg.src = localStorage.getItem("pet");
-
-      avatar.appendChild(tagimg);
-      break;
-    case 2:
-      pic = document.getElementById("avatar2").src;
-      localStorage.setItem("pet", pic);
-      tagimg = document.createElement(tagname="img");
-      tagimg.src = localStorage.getItem("pet");
-
-      avatar.appendChild(tagimg);
-      break;
-    case 3:
-      pic = document.getElementById("avatar3").src;
-      localStorage.setItem("pet", pic);
-      avatar = document.getElementById("avatar");
-      tagimg = document.createElement(tagname="img");
-      tagimg.src = localStorage.getItem("pet");
-
-      avatar.appendChild(tagimg);
-      break;
-    case 4:
-      pic = document.getElementById("avatar4").src;
-      localStorage.setItem("pet", pic);
-      avatar = document.getElementById("avatar");
-      tagimg = document.createElement(tagname="img");
-      tagimg.src = localStorage.getItem("pet");
-
-      avatar.appendChild(tagimg);
-      break;
-  }
-}
 
 function addZero(i) {
   if (i<10) {i = "0" + i};
   return i;
 }
-
-
 
 
 function nama(){ 
@@ -149,12 +158,6 @@ function nama(){
   
   
 }
-
-
-
-
-
-
 
 function game(){
     j = 3;
@@ -215,28 +218,20 @@ function statusbar(){
   sisa2 = document.getElementById("sisa2"); //bath
   sisa3 = document.getElementById("sisa3"); //sleep
   sisa4 = document.getElementById("sisa4"); //eat
-  width1 = 150;
-  width2 = 150;
-  width3 = 150;
-  width4 = 150;
-  var id = setInterval(framekurang, 1000); 
+  width = 200;
+  var id = setInterval(framekurang, 100); 
 }
 
 function framekurang(){
-
-  if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
+  if (width <= 0){
     clearInterval(id);
-    // i = 0;
+    i = 0;
   } else {
-    width1--;
-    width2--;
-    width3--;
-    width4--;
-
-    sisa1.style.width = width1 + "px"; //play
-    sisa2.style.width = width2 + "px"; //bath
-    sisa3.style.width = width3 + "px"; //sleep
-    sisa4.style.width = width4 + "px"; //eat
+    width--;
+    sisa1.style.width = width + "px"; //play
+    sisa2.style.width = width + "px"; //bath
+    sisa3.style.width = width + "px"; //sleep
+    sisa4.style.width = width + "px"; //eat
   }
 }
 
@@ -260,64 +255,31 @@ function level(){
 
 function eating(){
   sisa4 = document.getElementById("sisa4");
-
-  // if(parseInt(sisa4.style.width) > 180){
-  //   sisa4.style.width = 180 + "px";
-  // }
-
-  width4+= 20;
-
-  if(parseInt(sisa4.style.width) >= 180 ){
-    width4 = 200;
-    sisa4.style.width = width4 + 'px';
-    return;
-  }
-
-  sisa4.style.width = width4 + "px";
+  width+= 20;
+  sisa4.style.width = width + "px";
   return;
 }
 
 function sleeping(){
   sisa3 = document.getElementById("sisa3"); //sleep
-  width3+= 20;
-
-  if(parseInt(sisa3.style.width) >= 180 ){
-    width3 = 200;
-    sisa3.style.width = width3 + 'px';
-    return;
-  }
-
-  sisa3.style.width = width3 + "px";
+  width+= 20;
+  sisa3.style.width = width + "px";
 
   return;
 }
 
 function bath(){
   sisa2 = document.getElementById("sisa2"); //bath
-  width2+= 20;
-
-  if(parseInt(sisa2.style.width) >= 180 ){
-    width2 = 200;
-    sisa2.style.width = width2 + 'px';
-    return;
-  }
-
-  sisa2.style.width = width2 + "px";
+  width+= 20;
+  sisa2.style.width = width + "px";
 
   return;
 }
 
 function play(){
   sisa1 = document.getElementById("sisa1");   
-  width1+= 20;
-
-  if(parseInt(sisa1.style.width) >= 180 ){
-    width1 = 200;
-    sisa1.style.width = width1 + 'px';
-    return;
-  }
-
-  sisa1.style.width = width1 + "px";
+  width+= 20;
+  sisa1.style.width = width + "px";
 
   return;
 }
