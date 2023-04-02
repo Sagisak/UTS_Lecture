@@ -111,9 +111,14 @@ function addZero(i) {
 
 
 function nama(){ 
+  var backgroundimages = new Array(
+    '/images/morning.jpg',
+    '/images/daylight.jpg',
+    '/images/evening.jpg',
+  );
   var t = 0;
   const now = new Date();
-  let hours = addZero(now.getHours());
+  let hours = now.getHours();
   var minute = now.getMinutes(); 
   namaprocess();
   setInterval(namaprocess, 1000);
@@ -151,16 +156,19 @@ function nama(){
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
       introduce =  document.getElementById("nama").style.fontSize='25px';
+      var body = document.getElementsByTagName("body")[0].setAttribute('style', 'background-image: url("'+backgroundimages[0]+'")');
     } else if (hours >= 12 && hours  < 17){
       introduce = document.getElementById("nama").innerHTML="<center>Good Afternoon, " + localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
       introduce =  document.getElementById("nama").style.fontSize='25px';
+      var body = document.getElementsByTagName("body")[0].setAttribute('style', 'background-image: url("'+backgroundimages[1]+'")');
     } else if (hours >= 17 && hours <= 23) {
       introduce = document.getElementById("nama").innerHTML="<center>Good Evening, " + localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
       introduce =  document.getElementById("nama").style.fontSize='25px';
+      var body = document.getElementsByTagName("body")[0].setAttribute('style', 'background-image: url("'+backgroundimages[2]+'")');
     }
     
   }
