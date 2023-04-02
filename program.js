@@ -199,21 +199,30 @@ function framekurang(){
 function framtambahMakan(){
     width+= 20;
     sisa4.style.width = width + "px";
+
+    return;
+
 }
 
 function framtambahTidur(){
   width+= 20;
-  sisa4.style.width = width + "px";
+  sisa3.style.width = width + "px";
+
+  return;
 }
 
 function framtambahMain(){
   width+= 20;
-  sisa4.style.width = width + "px";
+  sisa2.style.width = width + "px";
+
+  return;
 }
 
 function framtambahMandi(){
   width+= 20;
-  sisa4.style.width = width + "px";
+  sisa1.style.width = width + "px";
+
+  return;
 }
 
 
@@ -235,23 +244,33 @@ function level(){
 
 function eating(){
   sisa4 = document.getElementById("sisa4");
-  var id = setinterval(framekurang);
-  var id2 = setinterval(frametambahMakan, 1);
+  width+= 20;
+  sisa4.style.width = width + "px";
+  return;
 }
 
 function sleeping(){
   sisa3 = document.getElementById("sisa3"); //sleep
-  var id2 = setInterval(frametambahTidur, 1);
+  width+= 20;
+  sisa3.style.width = width + "px";
+
+  return;
 }
 
 function bath(){
-  
-  var id2 = setInterval(frametambahMandi, 1);
+  sisa2 = document.getElementById("sisa2"); //bath
+  width+= 20;
+  sisa2.style.width = width + "px";
+
+  return;
 }
 
 function play(){
   sisa1 = document.getElementById("sisa1");   
-  var id2 = setInterval(frametambahMain, 1);
+  width+= 20;
+  sisa1.style.width = width + "px";
+
+  return;
 }
 
 
