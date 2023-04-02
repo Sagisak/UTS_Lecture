@@ -1,9 +1,6 @@
 // FUNCTION UNTUK SLIDE SLIDE GG GIMANK!
 
-time = 0;
-lv = 1
 
-loop = 1;
 
 
 
@@ -41,7 +38,8 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 
 // SELESAI DISINI! HEHE
 
-
+lv = 1
+loop = 1;
 
 function info(){
     var NamaPet = document.getElementById("petName").value;
@@ -92,13 +90,24 @@ function addZero(i) {
   return i;
 }
 
-function nama(){
+
+
+
+function nama(){ 
+  var t = 0;
   const now = new Date();
-  const hours = addZero(now.getHours());
-  const minute = addZero(now.getMinutes());
-  const timestring = `${hours} : ${minute}`;
-  time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
-  time = document.getElementById("time").style.fontWeight='bold';
+  let hours = addZero(now.getHours());
+  var minute = addZero(now.getMinutes()); 
+  now.setSeconds(minute);
+  seconds = addZero(now.getSeconds());
+  namaprocess();
+  setInterval(namaprocess, 1000);
+
+  function namaprocess(){
+    minute = minute + 1;
+    var timestring = hours +":" + minute;
+    time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
+    time = document.getElementById("time").style.fontWeight='bold';
     if (hours >= 0 && hours < 12){
       introduce = document.getElementById("nama").innerHTML="<center>good morning "+ localStorage.getItem("nama") + "</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Arial';
@@ -112,9 +121,13 @@ function nama(){
       introduce =  document.getElementById("nama").style.fontFamily='Arial';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
     }
-
+    
+  }
+  
   
 }
+
+
 
 
 
@@ -196,34 +209,6 @@ function framekurang(){
   }
 }
 
-function framtambahMakan(){
-    width+= 20;
-    sisa4.style.width = width + "px";
-
-    return;
-
-}
-
-function framtambahTidur(){
-  width+= 20;
-  sisa3.style.width = width + "px";
-
-  return;
-}
-
-function framtambahMain(){
-  width+= 20;
-  sisa2.style.width = width + "px";
-
-  return;
-}
-
-function framtambahMandi(){
-  width+= 20;
-  sisa1.style.width = width + "px";
-
-  return;
-}
 
 
 
