@@ -260,9 +260,14 @@ function level(){
 
 function eating(){
   sisa4 = document.getElementById("sisa4");
+
+  // if(parseInt(sisa4.style.width) > 180){
+  //   sisa4.style.width = 180 + "px";
+  // }
+
   width4+= 20;
 
-  if(parseInt(sisa4.style.width) >= 200 ){
+  if(parseInt(sisa4.style.width) >= 180 ){
     width4 = 200;
     sisa4.style.width = width4 + 'px';
     return;
@@ -276,7 +281,7 @@ function sleeping(){
   sisa3 = document.getElementById("sisa3"); //sleep
   width3+= 20;
 
-  if(parseInt(sisa3.style.width) >= 200 ){
+  if(parseInt(sisa3.style.width) >= 180 ){
     width3 = 200;
     sisa3.style.width = width3 + 'px';
     return;
@@ -291,7 +296,7 @@ function bath(){
   sisa2 = document.getElementById("sisa2"); //bath
   width2+= 20;
 
-  if(parseInt(sisa2.style.width) >= 200 ){
+  if(parseInt(sisa2.style.width) >= 180 ){
     width2 = 200;
     sisa2.style.width = width2 + 'px';
     return;
@@ -306,7 +311,7 @@ function play(){
   sisa1 = document.getElementById("sisa1");   
   width1+= 20;
 
-  if(parseInt(sisa1.style.width) >= 200 ){
+  if(parseInt(sisa1.style.width) >= 180 ){
     width1 = 200;
     sisa1.style.width = width1 + 'px';
     return;
