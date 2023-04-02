@@ -147,10 +147,16 @@ function nama(){
     }
 
     var timestring = hourprint +" : " + printminute;
-   
-    time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
-    time = document.getElementById("time").style.fontWeight='bold';
-    time = document.getElementById("time").style.fontSize='30px';
+    if (hours >= 6 && hours  < 17){
+      time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
+      time = document.getElementById("time").style.fontWeight='bold';
+      time = document.getElementById("time").style.fontSize='30px';
+    } else {
+      time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
+      time = document.getElementById("time").style.fontWeight='bold';
+      time = document.getElementById("time").style.fontSize='30px';
+      time = document.getElementById("time").style.color='white';
+    }
     if (hours >= 6 && hours < 12){
       introduce = document.getElementById("nama").innerHTML="<center>Good Morning, "+ localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
@@ -168,6 +174,7 @@ function nama(){
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
       introduce =  document.getElementById("nama").style.fontSize='25px';
+      introduce =  document.getElementById("nama").style.color='white';
       var body = document.getElementsByTagName("body")[0].setAttribute('style', 'background-image: url("'+backgroundimages[2]+'")');
     }
     
