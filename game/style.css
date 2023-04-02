@@ -78,9 +78,6 @@ td{
     border: none;
 }
 
-.avatar{
-    margin-left: auto;
-}
 
 
 .button-container {
@@ -123,7 +120,6 @@ td{
 footer {
     margin-top: 40px; 
     background-color: rgba(255, 255, 255, 0.5);
-    justify-content: space-between;
     text-align: center;
     padding: 1px;
 }
