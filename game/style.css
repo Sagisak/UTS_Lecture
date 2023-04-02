@@ -1,6 +1,6 @@
 body {
     font-family: cursive;
-    background-image: url("/images/bg2.jpg");
+    background-image: url("/images/morning.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -78,7 +78,7 @@ td{
     border: none;
 }
 
-#avatar{
+.avatar{
     margin-left: auto;
 }
 
