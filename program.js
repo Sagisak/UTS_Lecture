@@ -150,29 +150,17 @@ function nama(){
       introduce = document.getElementById("nama").innerHTML="<center>Good Morning, "+ localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
-<<<<<<< HEAD
       introduce =  document.getElementById("nama").style.fontSize='25px';
-=======
-      introduce =  document.getElementById("nama").style.fontSize='50px';
->>>>>>> 04685ac037d34957209eb867b3bbcdd2e2f1a58d
     } else if (hours >= 12 && hours  < 17){
       introduce = document.getElementById("nama").innerHTML="<center>Good Afternoon, " + localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
-<<<<<<< HEAD
       introduce =  document.getElementById("nama").style.fontSize='25px';
-=======
-      introduce =  document.getElementById("nama").style.fontSize='50px';
->>>>>>> 04685ac037d34957209eb867b3bbcdd2e2f1a58d
     } else if (hours >= 17 && hours <= 23) {
       introduce = document.getElementById("nama").innerHTML="<center>Good Evening, " + localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
-<<<<<<< HEAD
       introduce =  document.getElementById("nama").style.fontSize='25px';
-=======
-      introduce =  document.getElementById("nama").style.fontSize='50px';
->>>>>>> 04685ac037d34957209eb867b3bbcdd2e2f1a58d
     }
     
   }
