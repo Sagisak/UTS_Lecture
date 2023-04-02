@@ -334,3 +334,132 @@ myButton.addEventListener("click", function() {
 });
 }
 
+/* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
+function gameRaihBintang(){
+  var containergame = document.getElementById("container-game");
+  containergame.style.display = "block";
+
+  var circle = document.getElementById("circle");
+  var star = document.getElementById("star");
+
+  circle.style.left = 0;
+  circle.style.top = 0;
+
+
+  // let circle = document.querySelector('#circle');
+  // let star = document.querySelector('#star');
+  var moveBy = 0;
+  moveBy = 125;
+
+  let point = 0;
+
+  let cl = 0;
+  let ct = 0;
+
+  let sl = 0;
+  let st = 0;
+
+
+  // let randomNumberX = Math.floor(Math.random() * 15) + 1;
+  // let randomNumberY = Math.floor(Math.random() * 9) + 1;
+
+
+  function starNewPos(){
+      star.style.opacity = 1;
+      sl = 0;
+      st = 0;
+
+      let randomNumberX = Math.floor(Math.random() * 13) + 1;
+      let randomNumberY = Math.floor(Math.random() * 6) + 1;
+
+      star.style.position = 'absolute';
+      star.style.left = 0;
+      star.style.top = 0;
+
+      setTimeout(() => {
+          /*star.style.transition = 2 + 's';*/
+          star.style.opacity = 0;
+          /*star.style.transition = 0 + 's';*/
+      }, 750);
+      /*star.style.opacity = 0;*/
+
+      star.style.left = parseInt(star.style.left) + (moveBy * randomNumberX) + 'px';
+      star.style.top = parseInt(star.style.top) + (moveBy * randomNumberY) + 'px';
+      
+      st = st + randomNumberY;
+      sl = sl + randomNumberX;
+  }
+
+  starNewPos();
+  updateCoor();
+
+  // Set the starting time in seconds
+  var timeLeft = 15;
+
+  // Get a reference to the timer element
+  var timerEl = document.getElementById("timer");
+
+  // Update the timer display every second
+  var timerInterval = setInterval(function() {
+      // Decrement the time left
+      timeLeft--;
+
+      // Update the timer display
+      timerEl.textContent = timeLeft;
+
+      // If the timer reaches 0, stop the interval
+      if (timeLeft === 0) {
+          clearInterval(timerInterval);
+          alert("Time's up!");
+          containergame.style.display = "none";
+
+          sisa1 = document.getElementById("sisa1");   
+          width1+= point;
+
+          if(parseInt(sisa1.style.width) + point >= 200 ){
+            width1 = 200;
+            sisa1.style.width = width1 + 'px';
+            return;
+          }
+
+          sisa1.style.width = width1 + "px";
+
+          return;
+      }
+
+  }, 1000); // 1000 milliseconds = 1 second
+
+  window.addEventListener('keyup', (e) =>{
+      switch(e.key){
+          case 'ArrowLeft':
+              circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
+              cl = parseInt(cl) - 1;
+              break;
+          case 'ArrowRight':
+              circle.style.left = parseInt(circle.style.left) + moveBy + 'px';
+              cl = parseInt(cl) + 1;
+              break;
+          case 'ArrowUp':
+              circle.style.top = parseInt(circle.style.top) - moveBy + 'px';
+              ct = parseInt(ct) - 1;
+              break;
+          case 'ArrowDown':
+              circle.style.top = parseInt(circle.style.top) + moveBy + 'px';
+              ct = parseInt(ct) + 1;
+              break; 
+      }
+
+      if(cl == sl && ct == st){
+          starNewPos();
+          point = parseInt(point) + 1;
+      }
+      updateCoor(); 
+  });
+
+  function updateCoor(){
+      document.getElementById("posCircle").innerHTML = "CIRCLE = X AXIS:" + parseInt(cl) + " Y AXIS:" + parseInt(ct);
+      document.getElementById("posStar").innerHTML = "STAR = X AXIS:" + parseInt(sl) + " Y AXIS:" + parseInt(st);
+      document.getElementById("point").innerHTML = "Point = " + parseInt(point);
+  }
+}
+
