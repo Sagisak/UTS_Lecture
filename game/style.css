@@ -1,7 +1,8 @@
 body {
     font-family: cursive;
-
-
+    background-image: url("/images/bg2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
   
 #status{
@@ -9,7 +10,17 @@ body {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto; 
+    margin-bottom: 50px;
 }
+
+#logo img{
+    
+    border-radius: 50%;
+
+}
+
+
+
 
 #status img{
     width: 30px;
@@ -109,17 +120,9 @@ td{
 }
 
 footer {
-    margin-top: 40px;
-    border-top: 2px solid black;    
+    margin-top: 40px; 
+    background-color: rgba(255, 255, 255, 0.7);
+    justify-content: space-between;
+    text-align: center;
+    padding: 1px;
 }
-
-hr {
-    height: 2px;
-    background-color: black;
-    border: none;
-  }
-
-time{
-    font-family: 'Times New Roman', Times, serif;
-}
-
