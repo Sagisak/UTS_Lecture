@@ -40,7 +40,8 @@ function counter(n){
     avatar = document.getElementById("avatar");
     
     var dataImage = localStorage.getItem("pet");
-    tagimg = document.createElement(tagname="img");
+    tagimg = document.createElement("img");
+    tagimg.id= ("petimage");
     switch(dataImage){
       case "1":
         tagimg.src = "/images/avatar1.png";
@@ -60,6 +61,10 @@ function counter(n){
   
     }
     avatar.appendChild(tagimg);
+    petkita = document.getElementById("petimage").style.width = "300px";
+    petkita = document.getElementById("petimage").style.display = "flex";
+    petkita = document.getElementById("petimage").style.marginLeft = "auto";
+    petkita = document.getElementById("petimage").style.marginRight = "auto";
   }
 
 
@@ -140,18 +145,22 @@ function nama(){
    
     time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
     time = document.getElementById("time").style.fontWeight='bold';
+    time = document.getElementById("time").style.fontSize='30px';
     if (hours >= 0 && hours < 12){
       introduce = document.getElementById("nama").innerHTML="<center>good morning "+ localStorage.getItem("nama") + "</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Arial';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
+      introduce =  document.getElementById("nama").style.fontSize='25px';
     } else if (hours >= 12 && hours  < 17){
       introduce = document.getElementById("nama").innerHTML="<center>good afternoon " + localStorage.getItem("nama") + "</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Arial';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
+      introduce =  document.getElementById("nama").style.fontSize='25px';
     } else if (hours >= 17 && hours <= 23) {
       introduce = document.getElementById("nama").innerHTML="<center>good evening " + localStorage.getItem("nama") + "</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Arial';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
+      introduce =  document.getElementById("nama").style.fontSize='25px';
     }
     
   }
