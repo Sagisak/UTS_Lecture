@@ -218,20 +218,27 @@ function statusbar(){
   sisa2 = document.getElementById("sisa2"); //bath
   sisa3 = document.getElementById("sisa3"); //sleep
   sisa4 = document.getElementById("sisa4"); //eat
-  width = 200;
-  var id = setInterval(framekurang, 100); 
+  width1 = 150;
+  width2 = 150;
+  width3 = 150;
+  width4 = 150;
+  var id = setInterval(framekurang, 3000); 
 }
 
 function framekurang(){
-  if (width <= 0){
+  if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
     clearInterval(id);
-    i = 0;
+
   } else {
-    width--;
-    sisa1.style.width = width + "px"; //play
-    sisa2.style.width = width + "px"; //bath
-    sisa3.style.width = width + "px"; //sleep
-    sisa4.style.width = width + "px"; //eat
+    width1--;
+    width2--;
+    width3--;
+    width4--;
+
+    sisa1.style.width = width1 + "px"; //play
+    sisa2.style.width = width2 + "px"; //bath
+    sisa3.style.width = width3 + "px"; //sleep
+    sisa4.style.width = width4 + "px"; //eat
   }
 }
 
@@ -255,49 +262,59 @@ function level(){
 
 function eating(){
   sisa4 = document.getElementById("sisa4");
-  width+= 20;
-  sisa4.style.width = width + "px";
+  
+  if (width4 + 20 > 200){
+    sisa4.style.width = 200 + 'px';
+    return;
+  }
+
+  width4+= 20;
+  sisa4.style.width = width4 + "px";
   return;
 }
 
 function sleeping(){
   sisa3 = document.getElementById("sisa3"); //sleep
-  width+= 20;
-  sisa3.style.width = width + "px";
+
+  if (width3 + 20> 200){
+    sisa3.style.width = 200 + 'px';
+    return;
+  }
+
+  width3+= 20;
+  sisa3.style.width = width3 + "px";
 
   return;
 }
 
 function bath(){
   sisa2 = document.getElementById("sisa2"); //bath
-  width+= 20;
-  sisa2.style.width = width + "px";
+
+  if (width2 + 20 > 200){
+    sisa2.style.width = 200 + 'px';
+    return;
+  }
+
+  width2+= 20;
+  sisa2.style.width = width2 + "px";
 
   return;
 }
-
-function play(){
-  sisa1 = document.getElementById("sisa1");   
-  width+= 20;
-  sisa1.style.width = width + "px";
-
-  return;
-}
-
 
 
 function sound(){
   var buttonSound = document.getElementById("button-sound");
   var myButton = document.getElementsByClassName("button-container");
 
-myButton.addEventListener("click", function() {
+  myButton.addEventListener("click", function() {
   buttonSound.currentTime = 0;
   buttonSound.play();
-});
+  });
 }
 
 /* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
 function gameRaihBintang(){
+  sisa1 = document.getElementById("sisa1");
   var containergame = document.getElementById("container-game");
   containergame.style.display = "block";
 
@@ -307,12 +324,6 @@ function gameRaihBintang(){
   circle.style.left = 0;
   circle.style.top = 0;
 
-
-  // let circle = document.querySelector('#circle');
-  // let star = document.querySelector('#star');
-  var moveBy = 0;
-  moveBy = 125;
-
   let point = 0;
 
   let cl = 0;
@@ -321,29 +332,24 @@ function gameRaihBintang(){
   let sl = 0;
   let st = 0;
 
-
-  // let randomNumberX = Math.floor(Math.random() * 15) + 1;
-  // let randomNumberY = Math.floor(Math.random() * 9) + 1;
-
+  let moveBy = 125;
 
   function starNewPos(){
+      var moveBy = 125;
       star.style.opacity = 1;
       sl = 0;
       st = 0;
 
-      let randomNumberX = Math.floor(Math.random() * 13) + 1;
-      let randomNumberY = Math.floor(Math.random() * 6) + 1;
+      let randomNumberX = Math.floor(Math.random() * 8) + 1;
+      let randomNumberY = Math.floor(Math.random() * 4) + 1;
 
       star.style.position = 'absolute';
       star.style.left = 0;
       star.style.top = 0;
 
       setTimeout(() => {
-          /*star.style.transition = 2 + 's';*/
           star.style.opacity = 0;
-          /*star.style.transition = 0 + 's';*/
-      }, 750);
-      /*star.style.opacity = 0;*/
+      }, 500);
 
       star.style.left = parseInt(star.style.left) + (moveBy * randomNumberX) + 'px';
       star.style.top = parseInt(star.style.top) + (moveBy * randomNumberY) + 'px';
@@ -375,37 +381,49 @@ function gameRaihBintang(){
           alert("Time's up!");
           containergame.style.display = "none";
 
+          window.removeEventListener('keyup', circleMovements);
+
           sisa1 = document.getElementById("sisa1");   
-          width1+= point;
+          sisa2 = document.getElementById("sisa2");
+          sisa3 = document.getElementById("sisa3");
+          sisa4 = document.getElementById("sisa4");
+          width1+= point * 3;
 
           if(parseInt(sisa1.style.width) + point >= 200 ){
             width1 = 200;
             sisa1.style.width = width1 + 'px';
-            return;
           }
+          else{
+            sisa1.style.width = width1 + "px";
+          }
+          width2 -= 10;
+          width3 -= 15;
+          width4 -= 20;
 
-          sisa1.style.width = width1 + "px";
+          sisa2.style.width = width2 + 'px';
+          sisa3.style.width = width3 + 'px';
+          sisa4.style.width = width4 + 'px';
 
           return;
       }
 
   }, 1000); // 1000 milliseconds = 1 second
 
-  window.addEventListener('keyup', (e) =>{
+  function circleMovements(e){
       switch(e.key){
-          case 'ArrowLeft':
+          case 'a':
               circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
               cl = parseInt(cl) - 1;
               break;
-          case 'ArrowRight':
+          case 'd':
               circle.style.left = parseInt(circle.style.left) + moveBy + 'px';
               cl = parseInt(cl) + 1;
               break;
-          case 'ArrowUp':
+          case 'w':
               circle.style.top = parseInt(circle.style.top) - moveBy + 'px';
               ct = parseInt(ct) - 1;
               break;
-          case 'ArrowDown':
+          case 's':
               circle.style.top = parseInt(circle.style.top) + moveBy + 'px';
               ct = parseInt(ct) + 1;
               break; 
@@ -416,12 +434,15 @@ function gameRaihBintang(){
           point = parseInt(point) + 1;
       }
       updateCoor(); 
-  });
+  }
+  window.addEventListener('keyup', circleMovements);
 
   function updateCoor(){
       document.getElementById("posCircle").innerHTML = "CIRCLE = X AXIS:" + parseInt(cl) + " Y AXIS:" + parseInt(ct);
       document.getElementById("posStar").innerHTML = "STAR = X AXIS:" + parseInt(sl) + " Y AXIS:" + parseInt(st);
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
+
+  
 }
 
