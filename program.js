@@ -104,9 +104,11 @@ function nama(){
       introduce =  document.getElementById("nama").style.fontFamily='Arial';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
     } else if (hours >= 12 && hours  < 17){
-      introduce = document.getElementById("nama").innerHTML="good afternoon " + localStorage.getItem("nama");
+      introduce = document.getElementById("nama").innerHTML="<center>good afternoon " + localStorage.getItem("nama") + "</center>";
+      introduce =  document.getElementById("nama").style.fontFamily='Arial';
+      introduce =  document.getElementById("nama").style.fontWeight='bold';
     } else if (hours >= 17 && hours <= 23) {
-      introduce = document.getElementById("nama").innerHTML="good evening " + localStorage.getItem("nama");
+      introduce = document.getElementById("nama").innerHTML="<center>good evening " + localStorage.getItem("nama") + "</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Arial';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
     }
