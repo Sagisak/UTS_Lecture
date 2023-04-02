@@ -15,7 +15,6 @@ function counter(n){
   } else if (n == 0){
     n = 4;
   }
-  id = document.getElementById("test").innerHTML = "1" + n;
   switch(n){
     case 1:
       localStorage.setItem("pet", "1");
@@ -32,8 +31,7 @@ function counter(n){
     default:
       localStorage.setItem("pet", "4");
       break;
-  }
-  id2 = document.getElementById("test2").innerHTML = "1" + localStorage.getItem("pet");
+    }
   }
 
   function pictureprint(){
@@ -242,41 +240,29 @@ function game(){
 
 }
 
+var id;
+
 function statusbar(){
   var i =0;
   width1 = 150;
   width2 = 150;
   width3 = 150;
   width4 = 150;
-  var id = setInterval(framekurang, 100); 
+  id = setInterval(framekurang, 100); 
+  
 }
 
-// function framekurang(){
-//   if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
-//     clearInterval(id);
-
-//   } else {
-//     width1--;
-//     width2--;
-//     width3--;
-//     width4--;
-
-//     sisa1.style.width = width1 + "px"; //play
-//     sisa2.style.width = width2 + "px"; //bath
-//     sisa3.style.width = width3 + "px"; //sleep
-//     sisa4.style.width = width4 + "px"; //eat
-//   }
-// 
-
 function framekurang(){
-  if ((width1 <= 0 && sisa1.style.width != '0px') || (width2 <= 0 && sisa2.style.width != '0px') || (width3 <= 0 && sisa3.style.width != '0px') || (width4 <= 0 && sisa4.style.width != '0px')){
+  if (parseInt(sisa1.style.width) <= 0 || parseInt(sisa2.style.width) <= 0 || parseInt(sisa3.style.width = width3) <= 0 || parseInt(sisa4.style.width) <= 0){
     clearInterval(id);
+    window.alert("LU RUSAK!");
+    window.location.replace("/home/main.html");
   } 
   else {
-    width1-=1;
-    width2-=1;
-    width3-=1;
-    width4-=1;
+    width1--;
+    width2--;
+    width3--;
+    width4--;
   
     sisa1.style.width = width1 + "px"; //play
     sisa2.style.width = width2 + "px"; //bath
@@ -284,6 +270,8 @@ function framekurang(){
     sisa4.style.width = width4 + "px"; //eat
   }
 }
+
+
 
 function level(){
   if (time == 180){
