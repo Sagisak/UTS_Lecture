@@ -176,6 +176,12 @@ function nama(){
   
 }
 
+
+sisa1 = document.getElementById("sisa1"); //play
+sisa2 = document.getElementById("sisa2"); //bath
+sisa3 = document.getElementById("sisa3"); //sleep
+sisa4 = document.getElementById("sisa4"); //eat
+
 function game(){
     j = 3;
     l = 4;
@@ -231,10 +237,6 @@ function game(){
 
 function statusbar(){
   var i =0;
-  sisa1 = document.getElementById("sisa1"); //play
-  sisa2 = document.getElementById("sisa2"); //bath
-  sisa3 = document.getElementById("sisa3"); //sleep
-  sisa4 = document.getElementById("sisa4"); //eat
   width1 = 150;
   width2 = 150;
   width3 = 150;
@@ -242,27 +244,39 @@ function statusbar(){
   var id = setInterval(framekurang, 3000); 
 }
 
+// function framekurang(){
+//   if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
+//     clearInterval(id);
+
+//   } else {
+//     width1--;
+//     width2--;
+//     width3--;
+//     width4--;
+
+//     sisa1.style.width = width1 + "px"; //play
+//     sisa2.style.width = width2 + "px"; //bath
+//     sisa3.style.width = width3 + "px"; //sleep
+//     sisa4.style.width = width4 + "px"; //eat
+//   }
+// 
+
 function framekurang(){
-  if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
+  if ((width1 <= 0 && sisa1.style.width != '0px') || (width2 <= 0 && sisa2.style.width != '0px') || (width3 <= 0 && sisa3.style.width != '0px') || (width4 <= 0 && sisa4.style.width != '0px')){
     clearInterval(id);
-
-  } else {
-    width1--;
-    width2--;
-    width3--;
-    width4--;
-
+  } 
+  else {
+    width1-=1;
+    width2-=1;
+    width3-=1;
+    width4-=1;
+  
     sisa1.style.width = width1 + "px"; //play
     sisa2.style.width = width2 + "px"; //bath
     sisa3.style.width = width3 + "px"; //sleep
     sisa4.style.width = width4 + "px"; //eat
   }
 }
-
-
-
-
-
 
 function level(){
   if (time == 180){
@@ -277,23 +291,27 @@ function level(){
 
 }
 
-function eating(){
-  sisa4 = document.getElementById("sisa4");
-  
-  if (width4 + 20 > 200){
+
+
+function eating(){  
+  if (width4 + 20 >= 200){
     sisa4.style.width = 200 + 'px';
     return;
   }
 
   width4+= 20;
   sisa4.style.width = width4 + "px";
+  
+  width3-= 5;
+  sisa3.style.width = width3 + "px";
+
+  width2-= 10;
+  sisa2.style.width = width2 + "px";
   return;
 }
 
 function sleeping(){
-  sisa3 = document.getElementById("sisa3"); //sleep
-
-  if (width3 + 20> 200){
+  if (width3 + 20 >= 200){
     sisa3.style.width = 200 + 'px';
     return;
   }
@@ -301,20 +319,19 @@ function sleeping(){
   width3+= 20;
   sisa3.style.width = width3 + "px";
 
+  width4-=10;
+  sisa4.style.width = width4 + "px";  
   return;
 }
 
 function bath(){
-  sisa2 = document.getElementById("sisa2"); //bath
-
-  if (width2 + 20 > 200){
+  if (width2 + 20 >= 200){
     sisa2.style.width = 200 + 'px';
     return;
   }
 
   width2+= 20;
   sisa2.style.width = width2 + "px";
-
   return;
 }
 
@@ -331,7 +348,6 @@ function sound(){
 
 /* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
 function gameRaihBintang(){
-  sisa1 = document.getElementById("sisa1");
   var containergame = document.getElementById("container-game");
   containergame.style.display = "block";
 
@@ -366,7 +382,7 @@ function gameRaihBintang(){
 
       setTimeout(() => {
           star.style.opacity = 0;
-      }, 500);
+      }, 2000);
 
       star.style.left = parseInt(star.style.left) + (moveBy * randomNumberX) + 'px';
       star.style.top = parseInt(star.style.top) + (moveBy * randomNumberY) + 'px';
