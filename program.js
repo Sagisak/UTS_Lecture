@@ -33,7 +33,6 @@ function counter(n){
       localStorage.setItem("pet", "4");
       break;
   }
-  id2 = document.getElementById("test2").innerHTML = "1" + localStorage.getItem("pet");
   }
 
   function pictureprint(){
