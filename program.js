@@ -97,15 +97,35 @@ function nama(){
   var t = 0;
   const now = new Date();
   let hours = addZero(now.getHours());
-  var minute = addZero(now.getMinutes()); 
-  now.setSeconds(minute);
-  seconds = addZero(now.getSeconds());
+  var minute = now.getMinutes(); 
   namaprocess();
   setInterval(namaprocess, 1000);
 
   function namaprocess(){
+    var hoursprint;
+    var printminute;
     minute = minute + 1;
-    var timestring = hours +":" + minute;
+    if(minute < 10){
+      printminute =  "0" + minute;
+    } else if (minute >= 10 && minute < 60){
+      var printminute = minute;
+    } else if (minute >= 60){
+      minute = 0;
+      printminute = "0" + 0;
+      hours = hours + 1;
+    }
+
+    if (hours < 10){
+      hourprint = "0" + hours;
+    } else if (hours >= 10 && hours < 24){
+      hourprint =  hours;
+    } else if (hours >= 24){
+      hours = 0;
+      hourprint = "0" + hours;
+    }
+
+    var timestring = hourprint +" : " + printminute;
+   
     time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
     time = document.getElementById("time").style.fontWeight='bold';
     if (hours >= 0 && hours < 12){
