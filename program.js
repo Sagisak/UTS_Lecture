@@ -151,7 +151,7 @@ function nama(){
     time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
     time = document.getElementById("time").style.fontWeight='bold';
     time = document.getElementById("time").style.fontSize='30px';
-    if (hours >= 0 && hours < 12){
+    if (hours >= 6 && hours < 12){
       introduce = document.getElementById("nama").innerHTML="<center>Good Morning, "+ localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
@@ -163,7 +163,7 @@ function nama(){
       introduce =  document.getElementById("nama").style.fontWeight='bold';
       introduce =  document.getElementById("nama").style.fontSize='25px';
       var body = document.getElementsByTagName("body")[0].setAttribute('style', 'background-image: url("'+backgroundimages[1]+'")');
-    } else if (hours >= 17 && hours <= 23) {
+    } else {
       introduce = document.getElementById("nama").innerHTML="<center>Good Evening, " + localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
