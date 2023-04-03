@@ -123,7 +123,7 @@ td{
     font-family: 'Delicious Handrawn', cursive;
     color: solid black;
     transition: background-color ease-in-out;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+    box-shadow: 10px 10px  rgba(0, 0, 0, 1);
     transition: 0.1s ease-in-out;
 }
 
