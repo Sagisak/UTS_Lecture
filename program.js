@@ -476,5 +476,6 @@ function gameRaihBintang(){
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
 
+  
 }
 
