@@ -321,8 +321,9 @@ function level(){
   function levelprocess(){
   time = time + 1;
   if (time == 280){
-    new_level = document.getElementById("level").innerHTML = "<b><center>THE DEAD! leve " + lv +" </center></b>";
-    fk = setInterval(framekurang, 200); //100
+    lv += 1
+    new_level = document.getElementById("level").innerHTML = "<b><center>THE DEAD! level " + lv +" </center></b>";
+    fk = setInterval(framekurang, 300); //100
   }
   else if (time == 120){
       lv += 1;
@@ -755,7 +756,7 @@ function gameRaihBintang(){
           sisa4 = document.getElementById("sisa4");
           width1+= point * 10;
 
-          if(parseInt(sisa1.style.width) + (point*9) >= 200 ){
+          if(parseInt(sisa1.style.width) + (point*10) >= 200 ){
             width1 = 200;
             sisa1.style.width = width1 + 'px';
           }
