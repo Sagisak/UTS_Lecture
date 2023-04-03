@@ -1,14 +1,17 @@
 # UTS_Lecture
 List Nama Kelompok:
-    1. Reynard                                      : 00000067065
-    2. Jose Andreas Lie                             : 00000067097
-    3. Leonardo Tyoes Huibu                         : 00000065503
-    4. Owen Christian Cahyadi                       : 00000067055
-    5. Kristoforus Kharis Putra Sadsuitubun         : 00000067127
+    1. Reynard                                      : 00000067065   : UI Designer
+    2. Jose Andreas Lie                             : 00000067097   : UX Designer
+    3. Leonardo Tyoes Huibu                         : 00000065503   : UX Designer
+    4. Owen Christian Cahyadi                       : 00000067055   : Bug & Game Tester
+    5. Kristoforus Kharis Putra Sadsuitubun         : 00000067127   : Bug & Game Tester
 
-Link GitHub: 
+DISCLAIMER: 
+Semua memiliki jobdesk yang setara dan sesuai, tidak ada yang lebih, tidak ada yang kurang, semua memiliki jobdesknya masing-masing
 
-Link Video Demo Website:
+Link GitHub: https://github.com/Sagisak/UTS_Lecture.git
+
+Link Video Demo Website: https://youtu.be/O1_oAB-1MSg
 
 Description:
 Ini bukan sebuah game dimana kamu menjaga peliharaan kamu, tetapi bagaimana cara kamu mempertahankan kehidupan peliharaan kamu.
