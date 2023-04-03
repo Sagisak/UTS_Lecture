@@ -148,7 +148,7 @@ function nama(){
       time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
       time = document.getElementById("time").style.fontWeight='bold';
       time = document.getElementById("time").style.fontSize='30px';
-      time =  document.getElementById("time").style.color='white';
+      time = document.getElementById("time").style.color='white';
 
     }
     
