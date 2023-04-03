@@ -745,9 +745,9 @@ function gameRaihBintang(){
           sisa3.style.width = width3 + 'px';
           sisa4.style.width = width4 + 'px';
 
-          
-          circle.removeChild(circle.firstElementChild);
-
+          while(circle.hasChildNodes()){  
+            circle.removeChild(circle.firstElementChild);
+          }
 
           return;
       }
