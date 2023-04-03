@@ -124,14 +124,22 @@ td{
     color: solid black;
     transition: background-color ease-in-out;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
-    
+    transition: 0.1s ease-in-out;
 }
-  
+
 .button:hover {
     background-color: #ffb700;
     cursor: pointer;
     transform: scale(120%);
+    transition: 0.1s ease-in-out;
 }
+
+.button:active{
+    transform: scale(100%);
+}
+
+
+  
 
 footer {
     margin-top: 40px; 
