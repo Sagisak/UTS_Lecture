@@ -756,7 +756,7 @@ function gameRaihBintang(){
           sisa2 = document.getElementById("sisa2");
           sisa3 = document.getElementById("sisa3");
           sisa4 = document.getElementById("sisa4");
-          width1+= point * 3;
+          width1+= point * 5;
 
           if(parseInt(sisa1.style.width) + (point*3) >= 200 ){
             width1 = 200;
