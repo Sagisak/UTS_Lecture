@@ -141,6 +141,7 @@ footer {
 }
 
 #container-game{
+    padding-top: 100px;
     height: 900px;
     width: 1600px;
     margin: 0 auto;

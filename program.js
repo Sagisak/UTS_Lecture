@@ -44,10 +44,10 @@ function counter(n){
     tagimg.id= ("petimage");
     switch(dataImage){
       case "1":
-        tagimg.src = "/images/avatar1.png";
+        tagimg.src = "/images/biasa.png";
         break;
       case "2":
-        tagimg.src = "/images/avatar2.png";
+        tagimg.src = "/images/biasa2.png";
         break;
       case "3":
         tagimg.src = "/images/avatar3.png";
@@ -94,21 +94,13 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 
 // SELESAI DISINI! HEHE
 
-lv = 1
+
 loop = 1;
 
 function info(){
     var NamaPet = document.getElementById("petName").value;
     localStorage.setItem("nama",NamaPet);
 } 
-
-
-
-function addZero(i) {
-  if (i<10) {i = "0" + i};
-  return i;
-}
-
 
 function nama(){ 
   var t = 0;
@@ -119,7 +111,7 @@ function nama(){
   setInterval(namaprocess, 1000);
 
   function namaprocess(){
-    var hoursprint;
+    var hourprint;
     var printminute;
     minute = minute + 1;
     if(minute < 10){
@@ -169,6 +161,7 @@ function nama(){
   
 }
 
+<<<<<<< HEAD
 function game(){
     j = 3;
     l = 4;
@@ -176,51 +169,67 @@ function game(){
     menu = document.getElementById("menu");
     boxinput = document.getElementById("boxInput");
     gameplay = document.getElementById("gameplay");
+=======
+
+sisa1 = document.getElementById("sisa1"); //play
+sisa2 = document.getElementById("sisa2"); //bath
+sisa3 = document.getElementById("sisa3"); //sleep
+sisa4 = document.getElementById("sisa4"); //eat
+var time;
+
+// function game(){
+//     j = 3;
+//     l = 4;
+//     f = 2;
+//     menu = document.getElementById("menu");
+//     boxinput = document.getElementById("boxInput");
+//     gameplay = document.getElementById("gameplay");
+>>>>>>> 10febc8671b2fe1c144184ec7f129a4b47712338
 
 
-    while(menu.hasChildNodes()){
-        menu.removeChild(menu.firstChild);
+//     while(menu.hasChildNodes()){
+//         menu.removeChild(menu.firstChild);
 
-    }
+//     }
 
-    while(boxinput.hasChildNodes()){
-        boxinput.removeChild(boxinput.firstChild);
-    }
+//     while(boxinput.hasChildNodes()){
+//         boxinput.removeChild(boxinput.firstChild);
+//     }
     
-    tagA = document.createElement(tagname="a");
-    tagTable = document.createElement(tagname="table");
-    tagTr = document.createElement(tagname="tr");
-    tagTd = document.createElement(tagname="td");
-    tagh2 = document.createElement(tagname="h2");
-    tagimg = document.createElement(tagname="img");
-    tagimg.src = "images/avatar1.png";
+//     tagA = document.createElement(tagname="a");
+//     tagTable = document.createElement(tagname="table");
+//     tagTr = document.createElement(tagname="tr");
+//     tagTd = document.createElement(tagname="td");
+//     tagh2 = document.createElement(tagname="h2");
+//     tagimg = document.createElement(tagname="img");
+//     tagimg.src = "images/avatar1.png";
 
-    tagbtn = document.createElement(tagname="button");
+//     tagbtn = document.createElement(tagname="button");
 
 
-    menu.appendChild(tagA);
-    tagA.appendChild(tagTable);
-    for(i=0;i < j; i++){
-            tagTr = document.createElement(tagname="tr");
-            tagTable.appendChild(tagTr);
-        for(k=0; k < l; k++){
-            tagTr = document.createElement(tagname="tr");
-            tagTd = document.createElement(tagname="td");
-            tagTr.appendChild(tagTd);
-        }
-    }
+//     menu.appendChild(tagA);
+//     tagA.appendChild(tagTable);
+//     for(i=0;i < j; i++){
+//             tagTr = document.createElement(tagname="tr");
+//             tagTable.appendChild(tagTr);
+//         for(k=0; k < l; k++){
+//             tagTr = document.createElement(tagname="tr");
+//             tagTd = document.createElement(tagname="td");
+//             tagTr.appendChild(tagTd);
+//         }
+//     }
 
-    for(i = 0; i < f; i++){
-        tagh2 = document.createElement(tagname="h2");
-        gameplay.appendChild(tagh2);
-    }
-    gameplay.appendChild(tagimg);
+//     for(i = 0; i < f; i++){
+//         tagh2 = document.createElement(tagname="h2");
+//         gameplay.appendChild(tagh2);
+//     }
+//     gameplay.appendChild(tagimg);
     
-    tagbtn.setAttribute("onclick",tambah());
-    tagbtn.onclick = tambah();
-    boxinput.appendChild(btn);
+//     tagbtn.setAttribute("onclick",tambah());
+//     tagbtn.onclick = tambah();
+//     boxinput.appendChild(btn);
 
-}
+// }
 
 function statusbar(){
   var i =0;
@@ -232,7 +241,12 @@ function statusbar(){
   width2 = 150;
   width3 = 150;
   width4 = 150;
+<<<<<<< HEAD
   var id = setInterval(framekurang, 3000); 
+=======
+  id = setInterval(framekurang, 1000); 
+  
+>>>>>>> 10febc8671b2fe1c144184ec7f129a4b47712338
 }
 
 function framekurang(){
@@ -253,27 +267,63 @@ function framekurang(){
 }
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 10febc8671b2fe1c144184ec7f129a4b47712338
 function level(){
-  if (time == 180){
+  var time = 0;
+  var lv = 1;
+  levelprocess();
+  setInterval(levelprocess, 1000);
+
+  function levelprocess(){
+  time = time + 1;
+  if (time == 720){
+    new_level = document.getElementById("level").innerHTML = "<b><center>the dead!</center></b>";
+    id = setInterval(framekurang, 100);
+  }
+  else if (time == 20){
       lv += 1;
-      new_level = document.getElementById("level").innerHTML ="level " + lv;
-  } else if (time == 360){
+      new_level = document.getElementById("level").innerHTML ="<b><center>level " + lv + "</center></b>";
+      id = setInterval(framekurang, 200);
+  } else if (time == 3){
     lv += 1;
-    new_level = document.getElementById("level").innerHTML ="level " + lv;
-  } else if (time == 720){
-    new_level = document.getElementById("level").innerHTML = "the dead!";
+    new_level = document.getElementById("level").innerHTML ="<b><center>level " + lv + "</center></b>";
+    id = setInterval(framekurang, 500);
+  } else{
+    new_level = document.getElementById("level").innerHTML = "<b><center>level " + lv + "</center></b>";
+  }
+  
+  
   }
 
 }
 
+<<<<<<< HEAD
 function eating(){
   sisa4 = document.getElementById("sisa4");
   
   if (width4 + 20 > 200){
+=======
+//For Diabling Button for 3 seconds
+// const buttonAct = document.getElementById("button-act");
+// function disableButton(input) {
+//   buttonAct.disabled = true;
+//   setTimeout(enableButton, parseInt(input) * 1000); // enable button after 3 seconds
+// }
+
+// function enableButton() {
+//   buttonAct.disabled = false;
+// }
+////////////////////////////////////
+
+function eating(){
+  if (width4 + 20 >= 200){
+>>>>>>> 10febc8671b2fe1c144184ec7f129a4b47712338
     sisa4.style.width = 200 + 'px';
     return;
   }
@@ -326,6 +376,7 @@ function sound(){
 function gameRaihBintang(){
   sisa1 = document.getElementById("sisa1");
   var containergame = document.getElementById("container-game");
+  containergame.scrollIntoView({ behavior: "smooth", block: "start", inline:"start"});
   containergame.style.display = "block";
 
   var circle = document.getElementById("circle");
@@ -453,6 +504,9 @@ function gameRaihBintang(){
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> 10febc8671b2fe1c144184ec7f129a4b47712338
 }
 
