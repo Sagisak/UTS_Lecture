@@ -465,22 +465,22 @@ function eating(){
     petkita = document.getElementById("petimage").style.marginRight = "auto";
 
   
-  if (width4 + 20 >= 200){
+  if (width4 + 25 >= 200){
     sisa4.style.width = 200 + 'px';
     setTimeout(gantidefault, 2000);
     return;
   }
 
   //menambah makan di status bar
-  width4+= 20;
+  width4+= 25;
   sisa4.style.width = width4 + "px";
   
   //mengurangi mandi di status bar
-  width2-= 10;
+  width2-= 5;
   sisa2.style.width = width2 + "px";
 
   //mengurangi main di status bar
-  width1-= 5;
+  width1-= 2;
   sisa1.style.width = width1 + "px";
 
   
@@ -522,16 +522,16 @@ function sleeping(){
 
   sisa3 = document.getElementById("sisa3"); //sleep
 
-  if (width3 + 20>= 200){
+  if (width3 + 25>= 200){
     sisa3.style.width = 200 + 'px';
     setTimeout(gantidefault, 2000);
     return;
   }
 
 
-  width3+= 20; //tidur namba status
-  width4-= 10; //makan kurang status
-  width1-= 5; //main  kurang status
+  width3+= 25; //tidur namba status
+  width4-= 5; //makan kurang status
+  width1-= 2; //main  kurang status
   width2-= 2;  //mandi kurang status
 
   sisa1.style.width = width1 + "px"; //play
@@ -577,15 +577,15 @@ avatar.appendChild(tagimg);
 
   sisa2 = document.getElementById("sisa2"); //bath
 
-  if (width2 + 20 >= 200){
+  if (width2 + 25 >= 200){
     sisa2.style.width = 200 + 'px';
     setTimeout(gantidefault, 2000);
     return;
   }
   
-  width2+= 20; //mandi kurang status
-  width3-= 5; //tidur namba status
-  width4-= 5; //makan kurang status
+  width2+= 25; //mandi namba status
+  width3-= 2; //tidur kurang status
+  width4-= 2; //makan kurang status
   width1-= 5; //main  kurang status
 
   sisa1.style.width = width1 + "px"; //play
@@ -728,7 +728,7 @@ function gameRaihBintang(){
   updateCoor();
 
   // Set the starting time in seconds
-  var timeLeft = 8;
+  var timeLeft = 7;
 
   // Get a reference to the timer element
   var timerEl = document.getElementById("timer");
@@ -753,18 +753,18 @@ function gameRaihBintang(){
           sisa2 = document.getElementById("sisa2");
           sisa3 = document.getElementById("sisa3");
           sisa4 = document.getElementById("sisa4");
-          width1+= point * 7;
+          width1+= point * 10;
 
-          if(parseInt(sisa1.style.width) + (point*3) >= 200 ){
+          if(parseInt(sisa1.style.width) + (point*9) >= 200 ){
             width1 = 200;
             sisa1.style.width = width1 + 'px';
           }
           else{
             sisa1.style.width = width1 + "px";
           }
-          width2 -= 2;
-          width3 -= 5;
-          width4 -= 10;
+          width2 -= 1;
+          width3 -= 2;
+          width4 -= 5;
 
           sisa2.style.width = width2 + 'px';
           sisa3.style.width = width3 + 'px';
