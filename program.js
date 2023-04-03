@@ -614,10 +614,7 @@ function sound(){
 /* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
 function gameRaihBintang(){
 
-  alert("Gapai Bola dengan menggunakan WASD secepat-cepatnya!\nBola akan menghilang setelah bola berpindah");
-  alert("3");
-  alert("2");
-  alert("1");
+  alert("Gapai Bola dengan menggunakan WASD secepat-cepatnya!\nBola akan menghilang setelah bola berpindah\nTekan OK jika siap untuk main.");
   
   avatar = document.getElementById("avatar");
   avatar.removeChild(avatar.firstElementChild);
