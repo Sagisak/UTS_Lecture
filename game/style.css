@@ -109,6 +109,7 @@ td{
 #button-act{
     align-self: center;
     padding-bottom: 15px;
+
     
 }
   
@@ -137,7 +138,10 @@ td{
     transform: scale(100%);
 }
 
-
+.button:disabled{
+    cursor: not-allowed;
+    background-color: green;
+}
   
 
 footer {
@@ -148,7 +152,7 @@ footer {
 }
 
 #container-game{
-    padding-top: 100px;
+    /* padding-top: 100px; */
     height: 900px;
     width: 1600px;
     margin: 0 auto;
@@ -185,4 +189,21 @@ footer {
     border-radius: 50%;
     border: 1px solid yellow;
 
+}
+
+#timer {
+    font-size: 50px;
+    margin: 0 auto;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:35px;
 }

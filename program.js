@@ -244,7 +244,7 @@ function statusbar(){
   width2 = 150;
   width3 = 150;
   width4 = 150;
-  fk = setInterval(framekurang, 100);
+  fk = setInterval(framekurang, 4000);
   
 }
 
@@ -274,22 +274,22 @@ function level(){
   var time = 0;
   var lv = 1;
   levelprocess();
-  setInterval(levelprocess, 100); // 1000
+  setInterval(levelprocess, 10000); // 1000
 
   function levelprocess(){
   time = time + 1;
   if (time == 720){
     new_level = document.getElementById("level").innerHTML = "<b><center>the dead!</center></b>";
-    fk = setInterval(framekurang, 100); //100
+    fk = setInterval(framekurang, 200); //100
   }
   else if (time == 20){
       lv += 1;
       new_level = document.getElementById("level").innerHTML ="<b><center>level " + lv + "</center></b>";
-      fk = setInterval(framekurang, 100); //200
+      fk = setInterval(framekurang, 400); //200
   } else if (time == 3){
     lv += 1;
     new_level = document.getElementById("level").innerHTML ="<b><center>level " + lv + "</center></b>";
-    fk = setInterval(framekurang, 100); //500
+    fk = setInterval(framekurang, 1000); //500
   } else{
     new_level = document.getElementById("level").innerHTML = "<b><center>level " + lv + "</center></b>";
   }
@@ -300,18 +300,98 @@ function level(){
 }
 
 //For Diabling Button for 3 seconds
-// const buttonAct = document.getElementById("button-act");
+// const buttonAct1 = document.getElementById("buttonss1");
+// const buttonAct2 = document.getElementById("buttonss2");
+// const buttonAct3 = document.getElementById("buttonss3");
+// const buttonAct4 = document.getElementById("buttonss4");
+
+// buttonAct1.addEventListener("click", () => {
+//   buttonAct1.disabled = true;
+//   buttonAct2.disabled = true;
+//   buttonAct3.disabled = true;
+//   buttonAct4.disabled = true;
+  
+//   setTimeout(() => {
+//     buttonAct1.disabled = false;
+//     buttonAct2.disabled = false;
+//     buttonAct3.disabled = false;
+//     buttonAct4.disabled = false;
+//   }, 3000);
+// });
+
+// buttonAct2.addEventListener("click", () => {
+//   buttonAct1.disabled = true;
+//   buttonAct2.disabled = true;
+//   buttonAct3.disabled = true;
+//   buttonAct4.disabled = true;
+  
+//   setTimeout(() => {
+//     buttonAct1.disabled = false;
+//     buttonAct2.disabled = false;
+//     buttonAct3.disabled = false;
+//     buttonAct4.disabled = false;
+//   }, 3000);
+// });
+
+// buttonAct3.addEventListener("click", () => {
+//   buttonAct1.disabled = true;
+//   buttonAct2.disabled = true;
+//   buttonAct3.disabled = true;
+//   buttonAct4.disabled = true;
+  
+//   setTimeout(() => {
+//     buttonAct1.disabled = false;
+//     buttonAct2.disabled = false;
+//     buttonAct3.disabled = false;
+//     buttonAct4.disabled = false;
+//   }, 3000);
+// });
+
+// buttonAct4.addEventListener("click", () => {
+//   buttonAct1.disabled = true;
+//   buttonAct2.disabled = true;
+//   buttonAct3.disabled = true;
+//   buttonAct4.disabled = true;
+  
+//   setTimeout(() => {
+//     buttonAct1.disabled = false;
+//     buttonAct2.disabled = false;
+//     buttonAct3.disabled = false;
+//     buttonAct4.disabled = false;
+//   }, 3000);
+// });
+
+
 // function disableButton(input) {
-//   buttonAct.disabled = true;
-//   setTimeout(enableButton, parseInt(input) * 1000); // enable button after 3 seconds
+//   buttonAct.style.cursor = "not-allowed";
+//   setTimeout(enableButton, input);
+//   //setTimeout(enableButton, parseInt(input) * 1000); // enable button after 3 seconds
 // }
 
 // function enableButton() {
-//   buttonAct.disabled = false;
+//   buttonAct.style.cursor = "default";
+// }
+
+
+
+// const buttons = document.getElementsByClassName("button");
+
+// function disableButton(input) {
+//   for (let i = 0; i < buttonAct.length; i++) {
+//     buttonAct[i].disabled = true;
+//   }
+//   setTimeout(enableButton, input);
+// }
+
+// function enableButton() {
+//   for (let i = 0; i < buttonAct.length; i++) {
+//     buttonAct[i].disabled = false;
+//   }
 // }
 ////////////////////////////////////
 
 function eating(){
+  
   if (width4 + 20 >= 200){
     sisa4.style.width = 200 + 'px';
     return;
@@ -489,8 +569,8 @@ function gameRaihBintang(){
   window.addEventListener('keyup', circleMovements);
 
   function updateCoor(){
-      document.getElementById("posCircle").innerHTML = "CIRCLE = X AXIS:" + parseInt(cl) + " Y AXIS:" + parseInt(ct);
-      document.getElementById("posStar").innerHTML = "STAR = X AXIS:" + parseInt(sl) + " Y AXIS:" + parseInt(st);
+      // document.getElementById("posCircle").innerHTML = "CIRCLE = X AXIS:" + parseInt(cl) + " Y AXIS:" + parseInt(ct);
+      // document.getElementById("posStar").innerHTML = "STAR = X AXIS:" + parseInt(sl) + " Y AXIS:" + parseInt(st);
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
 }
