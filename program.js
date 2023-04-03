@@ -580,12 +580,10 @@ function play(){
 function sound(){
   var buttonSound = document.getElementById("button-act");
   var myButton = document.getElementsByClassName("button-container");
-
-  myButton.addEventListener("click", function() {
   buttonSound.currentTime = 0;
   buttonSound.play();
-  });
-}
+  }
+
 
 /* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
 function gameRaihBintang(){
