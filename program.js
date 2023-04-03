@@ -108,6 +108,11 @@ function info(){
 } 
 
 function nama(){ 
+  const backimage = new Array(
+    "/images/morning.jpg",
+    "/images/daylight.jpg",
+    "/images/evening.jpg",
+    );
   const now = new Date();
   let hours = now.getHours();
   var minute = now.getMinutes(); 
@@ -152,17 +157,20 @@ function nama(){
     }
     
     if (hours >= 5 && hours < 12){
+      background = document.getElementsByTagName("body")[0].setAttribute('style', 'background-image: url("'+backimage[0]+'")');
       introduce = document.getElementById("nama").innerHTML="<center>Good Morning, "+ localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
       introduce =  document.getElementById("nama").style.fontSize='50px';
     } else if (hours >= 12 && hours  < 17){
+      background = document.getElementsByTagName("body")[0].setAttribute('style', 'background-image: url("'+backimage[1]+'")');
       introduce = document.getElementById("nama").innerHTML="<center>Good Afternoon, " + localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
       introduce =  document.getElementById("nama").style.fontSize='25px';
       introduce =  document.getElementById("nama").style.fontSize='50px';
     } else {
+      background = document.getElementsByTagName("body")[0].setAttribute('style', 'background-image: url("'+backimage[2]+'")');
       introduce = document.getElementById("nama").innerHTML="<center>Good Evening, " + localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
@@ -267,6 +275,40 @@ function framekurang(){
     sisa2.style.width = width2 + "px"; //bath
     sisa3.style.width = width3 + "px"; //sleep
     sisa4.style.width = width4 + "px"; //eat
+  }
+
+  if (width1 <= 50 || width2 <= 50 || width3 <= 50 || width4 <= 50){
+    avatar = document.getElementById("avatar");
+    avatar.removeChild(avatar.firstElementChild);
+    var dataImage = localStorage.getItem("pet");
+    tagimg = document.createElement("img");
+    tagimg.id= ("petimage");
+    switch(dataImage){
+      case "1":
+        tagimg.src = "/images/rubah/makan.png";
+        break;
+      case "2":
+        tagimg.src = "/images/babi/makan.png";
+        break;
+      case "3":
+        tagimg.src = "/images/kambing/makan.png";
+        break;
+      case "4":
+        tagimg.src = "/images/panda/makan.png";
+        break;
+      default :
+      tagimg.src = "/images/avatar4.png";
+      break;
+  
+    }
+  
+  avatar.appendChild(tagimg);
+    petkita = document.getElementById("petimage").style.width = "300px";
+    petkita = document.getElementById("petimage").style.display = "flex";
+    petkita = document.getElementById("petimage").style.marginLeft = "auto";
+    petkita = document.getElementById("petimage").style.marginRight = "auto";
+  } else {
+    gantidefault();
   }
 }
 
@@ -391,41 +433,141 @@ function level(){
 ////////////////////////////////////
 
 function eating(){
+
+    avatar = document.getElementById("avatar");
+    avatar.removeChild(avatar.firstElementChild);
+    var dataImage = localStorage.getItem("pet");
+    tagimg = document.createElement("img");
+    tagimg.id= ("petimage");
+    switch(dataImage){
+      case "1":
+        tagimg.src = "/images/rubah/makan.png";
+        break;
+      case "2":
+        tagimg.src = "/images/babi/makan.png";
+        break;
+      case "3":
+        tagimg.src = "/images/kambing/makan.png";
+        break;
+      case "4":
+        tagimg.src = "/images/panda/makan.png";
+        break;
+      default :
+      tagimg.src = "/images/avatar4.png";
+      break;
+  
+    }
+  
+  avatar.appendChild(tagimg);
+    petkita = document.getElementById("petimage").style.width = "300px";
+    petkita = document.getElementById("petimage").style.display = "flex";
+    petkita = document.getElementById("petimage").style.marginLeft = "auto";
+    petkita = document.getElementById("petimage").style.marginRight = "auto";
+
   
   if (width4 + 20 >= 200){
     sisa4.style.width = 200 + 'px';
+    setTimeout(gantidefault, 2000);
     return;
   }
 
   width4+= 20;
   sisa4.style.width = width4 + "px";
+  setTimeout(gantidefault, 2000);
+
+  
   return;
+  
+
 }
 
 function sleeping(){
+  avatar = document.getElementById("avatar");
+    avatar.removeChild(avatar.firstElementChild);
+    var dataImage = localStorage.getItem("pet");
+    tagimg = document.createElement("img");
+    tagimg.id= ("petimage");
+    switch(dataImage){
+      case "1":
+        tagimg.src = "/images/rubah/tidur.png";
+        break;
+      case "2":
+        tagimg.src = "/images/babi/tidur.png";
+        break;
+      case "3":
+        tagimg.src = "/images/kambing/tidur.png";
+        break;
+      case "4":
+        tagimg.src = "/images/panda/tidur.png";
+        break;
+      default :
+      tagimg.src = "/images/avatar4.png";
+      break;
+  
+    }
+  
+  avatar.appendChild(tagimg);
+    petkita = document.getElementById("petimage").style.width = "300px";
+    petkita = document.getElementById("petimage").style.display = "flex";
+    petkita = document.getElementById("petimage").style.marginLeft = "auto";
+    petkita = document.getElementById("petimage").style.marginRight = "auto";
+
   sisa3 = document.getElementById("sisa3"); //sleep
 
-  if (width3 + 20> 200){
+  if (width3 + 20>= 200){
     sisa3.style.width = 200 + 'px';
+    setTimeout(gantidefault, 2000);
     return;
   }
 
   width3+= 20;
   sisa3.style.width = width3 + "px";
-
+  setTimeout(gantidefault, 2000);
   return;
 }
 
 function bath(){
+  avatar = document.getElementById("avatar");
+  avatar.removeChild(avatar.firstElementChild);
+  var dataImage = localStorage.getItem("pet");
+  tagimg = document.createElement("img");
+  tagimg.id= ("petimage");
+  switch(dataImage){
+    case "1":
+      tagimg.src = "/images/rubah/mandi.png";
+      break;
+    case "2":
+      tagimg.src = "/images/babi/mandi.png";
+      break;
+    case "3":
+      tagimg.src = "/images/kambing/mandi.png";
+      break;
+    case "4":
+      tagimg.src = "/images/panda/mandi.png";
+      break;
+    default :
+    tagimg.src = "/images/avatar4.png";
+    break;
+
+  }
+
+avatar.appendChild(tagimg);
+  petkita = document.getElementById("petimage").style.width = "300px";
+  petkita = document.getElementById("petimage").style.display = "flex";
+  petkita = document.getElementById("petimage").style.marginLeft = "auto";
+  petkita = document.getElementById("petimage").style.marginRight = "auto";
+
   sisa2 = document.getElementById("sisa2"); //bath
 
-  if (width2 + 20 > 200){
+  if (width2 + 20 >= 200){
     sisa2.style.width = 200 + 'px';
+    setTimeout(gantidefault, 2000);
     return;
   }
 
   width2+= 20;
   sisa2.style.width = width2 + "px";
+  setTimeout(gantidefault, 2000);
 
   return;
 }
@@ -443,6 +585,39 @@ function sound(){
 
 /* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
 function gameRaihBintang(){
+  avatar = document.getElementById("avatar");
+  avatar.removeChild(avatar.firstElementChild);
+  var dataImage = localStorage.getItem("pet");
+  tagimg = document.createElement("img");
+  tagimg.id= ("petimage");
+  switch(dataImage){
+    case "1":
+      tagimg.src = "/images/rubah/main.png";
+      break;
+    case "2":
+      tagimg.src = "/images/babi/main.png";
+      break;
+    case "3":
+      tagimg.src = "/images/kambing/main.png";
+      break;
+    case "4":
+      tagimg.src = "/images/panda/main.png";
+      break;
+    default :
+    tagimg.src = "/images/avatar4.png";
+    break;
+
+  }
+
+  avatar.appendChild(tagimg);
+  petkita = document.getElementById("petimage").style.width = "300px";
+  petkita = document.getElementById("petimage").style.display = "flex";
+  petkita = document.getElementById("petimage").style.marginLeft = "auto";
+  petkita = document.getElementById("petimage").style.marginRight = "auto";
+
+  setTimeout(gantidefault,15000);
+
+
   var containergame = document.getElementById("container-game");
   containergame.style.display = "block";
   window.scrollBy(0, 650);
@@ -535,6 +710,7 @@ function gameRaihBintang(){
           sisa3.style.width = width3 + 'px';
           sisa4.style.width = width4 + 'px';
 
+
           return;
       }
 
@@ -546,7 +722,15 @@ function gameRaihBintang(){
               circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
               cl = parseInt(cl) - 1;
               break;
+          case 'A':
+              circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
+              cl = parseInt(cl) - 1;
+              break;
           case 'd':
+              circle.style.left = parseInt(circle.style.left) + moveBy + 'px';
+              cl = parseInt(cl) + 1;
+              break;
+          case 'D':
               circle.style.left = parseInt(circle.style.left) + moveBy + 'px';
               cl = parseInt(cl) + 1;
               break;
@@ -554,7 +738,15 @@ function gameRaihBintang(){
               circle.style.top = parseInt(circle.style.top) - moveBy + 'px';
               ct = parseInt(ct) - 1;
               break;
+          case 'W':
+              circle.style.top = parseInt(circle.style.top) - moveBy + 'px';
+              ct = parseInt(ct) - 1;
+              break;
           case 's':
+              circle.style.top = parseInt(circle.style.top) + moveBy + 'px';
+              ct = parseInt(ct) + 1;
+              break; 
+          case 'S':
               circle.style.top = parseInt(circle.style.top) + moveBy + 'px';
               ct = parseInt(ct) + 1;
               break; 
@@ -573,4 +765,38 @@ function gameRaihBintang(){
       // document.getElementById("posStar").innerHTML = "STAR = X AXIS:" + parseInt(sl) + " Y AXIS:" + parseInt(st);
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
+}
+
+
+function gantidefault(){
+
+  avatar = document.getElementById("avatar");
+  var dataImage = localStorage.getItem("pet");
+  tagimg = document.createElement("img");
+  tagimg.id= ("petimage");
+  avatar.removeChild(avatar.firstElementChild);
+  switch(dataImage){
+    case "1":
+      tagimg.src = "/images/rubah/default.png";
+      break;
+    case "2":
+      tagimg.src = "/images/babi/default.png";
+      break;
+    case "3":
+      tagimg.src = "/images/kambing/default.png";
+      break;
+    case "4":
+      tagimg.src = "/images/panda/default.png";
+      break;
+    default :
+    tagimg.src = "/images/avatar4.png";
+    break;
+
+  }
+  avatar.appendChild(tagimg);
+    petkita = document.getElementById("petimage").style.width = "300px";
+    petkita = document.getElementById("petimage").style.display = "flex";
+    petkita = document.getElementById("petimage").style.marginLeft = "auto";
+    petkita = document.getElementById("petimage").style.marginRight = "auto";
+
 }
