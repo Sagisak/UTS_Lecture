@@ -273,9 +273,19 @@ function level(){
 
 }
 
+//For Diabling Button for 3 seconds
+// const buttonAct = document.getElementById("button-act");
+// function disableButton(input) {
+//   buttonAct.disabled = true;
+//   setTimeout(enableButton, parseInt(input) * 1000); // enable button after 3 seconds
+// }
 
+// function enableButton() {
+//   buttonAct.disabled = false;
+// }
+////////////////////////////////////
 
-function eating(){  
+function eating(){
   if (width4 + 20 >= 200){
     sisa4.style.width = 200 + 'px';
     return;
@@ -334,6 +344,7 @@ function sound(){
 /* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
 function gameRaihBintang(){
   var containergame = document.getElementById("container-game");
+  containergame.scrollIntoView({ behavior: "smooth", block: "start", inline:"start"});
   containergame.style.display = "block";
 
   var circle = document.getElementById("circle");
@@ -460,6 +471,6 @@ function gameRaihBintang(){
       document.getElementById("posStar").innerHTML = "STAR = X AXIS:" + parseInt(sl) + " Y AXIS:" + parseInt(st);
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
-  
+
 }
 
