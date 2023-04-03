@@ -42,10 +42,10 @@ function counter(n){
     tagimg.id= ("petimage");
     switch(dataImage){
       case "1":
-        tagimg.src = "/images/avatar1.png";
+        tagimg.src = "/images/biasa.png";
         break;
       case "2":
-        tagimg.src = "/images/avatar2.png";
+        tagimg.src = "/images/biasa2.png";
         break;
       case "3":
         tagimg.src = "/images/avatar3.png";
@@ -92,21 +92,13 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 
 // SELESAI DISINI! HEHE
 
-lv = 1
+
 loop = 1;
 
 function info(){
     var NamaPet = document.getElementById("petName").value;
     localStorage.setItem("nama",NamaPet);
 } 
-
-
-
-function addZero(i) {
-  if (i<10) {i = "0" + i};
-  return i;
-}
-
 
 function nama(){ 
   var backgroundimages = new Array(
@@ -122,7 +114,7 @@ function nama(){
   setInterval(namaprocess, 1000);
 
   function namaprocess(){
-    var hoursprint;
+    var hourprint;
     var printminute;
     minute = minute + 1;
     if(minute < 10){
@@ -186,6 +178,7 @@ sisa1 = document.getElementById("sisa1"); //play
 sisa2 = document.getElementById("sisa2"); //bath
 sisa3 = document.getElementById("sisa3"); //sleep
 sisa4 = document.getElementById("sisa4"); //eat
+var time;
 
 function game(){
     j = 3;
@@ -272,16 +265,28 @@ function framekurang(){
 }
 
 
-
 function level(){
-  if (time == 180){
+  var time = 0;
+  var lv = 1;
+  levelprocess();
+  setInterval(levelprocess, 1000);
+
+  function levelprocess(){
+  time = time + 1;
+  if (time == 720){
+    new_level = document.getElementById("level").innerHTML = "<b><center>the dead!</center></b>";
+  }
+  else if (time == 360){
       lv += 1;
-      new_level = document.getElementById("level").innerHTML ="level " + lv;
-  } else if (time == 360){
+      new_level = document.getElementById("level").innerHTML ="<b><center>level " + lv + "</center></b>";
+  } else if (time == 180){
     lv += 1;
-    new_level = document.getElementById("level").innerHTML ="level " + lv;
-  } else if (time == 720){
-    new_level = document.getElementById("level").innerHTML = "the dead!";
+    new_level = document.getElementById("level").innerHTML ="<b><center>level " + lv + "</center></b>";
+  } else{
+    new_level = document.getElementById("level").innerHTML = "<b><center>level " + lv + "</center></b>";
+  }
+  
+  
   }
 
 }
