@@ -6,3 +6,6 @@ List Nama Kelompok:
     4. Owen Christian Cahyadi                       : 00000067055
     5. Kristoforus Kharis Putra Sadsuitubun         : 00000067127
 
+Link GitHub: 
+
+Link Video Demo Website:
