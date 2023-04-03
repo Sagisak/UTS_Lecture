@@ -150,3 +150,7 @@ button:after {
     border-radius: 10px;
     border: 2px solid #ccc;
 }
+
+#star{
+    background-image: url("/images/play.png");
+}
