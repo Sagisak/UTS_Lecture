@@ -528,8 +528,18 @@ function sleeping(){
     return;
   }
 
-  width3+= 20;
-  sisa3.style.width = width3 + "px";
+
+  width3+= 20; //tidur namba status
+  width4-= 15; //makan kurang status
+  width1-= 15; //main  kurang status
+  width2-= 5;  //mandi kurang status
+
+  sisa1.style.width = width1 + "px"; //play
+  sisa2.style.width = width2 + "px"; //bath
+  sisa3.style.width = width3 + "px"; //sleep
+  sisa4.style.width = width4 + "px"; //eat
+
+
   setTimeout(gantidefault, 2000);
   return;
 }
@@ -572,9 +582,17 @@ avatar.appendChild(tagimg);
     setTimeout(gantidefault, 2000);
     return;
   }
+  
+  width2+= 20; //mandi kurang status
+  width3-= 10; //tidur namba status
+  width4-= 10; //makan kurang status
+  width1-= 10; //main  kurang status
 
-  width2+= 20;
-  sisa2.style.width = width2 + "px";
+  sisa1.style.width = width1 + "px"; //play
+  sisa2.style.width = width2 + "px"; //bath
+  sisa3.style.width = width3 + "px"; //sleep
+  sisa4.style.width = width4 + "px"; //eat
+
   setTimeout(gantidefault, 2000);
 
   return;
@@ -590,14 +608,13 @@ function sound(){
   var myButton = document.getElementsByClassName("button-container");
   buttonSound.currentTime = 0;
   buttonSound.play();
-  }
-
-
+}
+    
+    
 /* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
 function gameRaihBintang(){
 
-  alert("Gapai Bola dengan menggunakan WASD secepat-cepatnya!");
-  alert("Bola akan menghilang setelah bola berpindah");
+  alert("Gapai Bola dengan menggunakan WASD secepat-cepatnya!\nBola akan menghilang setelah bola berpindah");
   alert("3");
   alert("2");
   alert("1");
@@ -714,7 +731,7 @@ function gameRaihBintang(){
   updateCoor();
 
   // Set the starting time in seconds
-  var timeLeft = 5;
+  var timeLeft = 10;
 
   // Get a reference to the timer element
   var timerEl = document.getElementById("timer");
