@@ -622,7 +622,7 @@ function gameRaihBintang(){
   containergame.style.display = "block";
   window.scrollBy(0, 650);
   containergame.scrollIntoView({ behavior: "smooth", block: "start", inline:"start"});
-
+  
 
   var circle = document.getElementById("circle");
   var star = document.getElementById("star");
