@@ -1,4 +1,4 @@
-// FUNCTION UNTUK SLIDE SLIDE GG GIMANK!
+//Sliding Image Funtion
 
 let slideIndex = 1;
 showSlide(slideIndex);
@@ -77,20 +77,7 @@ function showSlide(n) {
 }
 
 
-
-/*
-
-document.getElementById("prevBtn").addEventListener("click", () => {
-  changeSlide(-1);
-});
-
-document.getElementById("nextBtn").addEventListener("click", () => {
-  changeSlide(1);
-});
-
-*/
-
-// SELESAI DISINI! HEHE
+// Ended Here
 
 lv = 1
 loop = 1;
@@ -473,7 +460,6 @@ function gameRaihBintang(){
       document.getElementById("posStar").innerHTML = "STAR = X AXIS:" + parseInt(sl) + " Y AXIS:" + parseInt(st);
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
-
   
 }
 
