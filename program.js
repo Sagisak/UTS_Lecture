@@ -108,7 +108,6 @@ function info(){
 } 
 
 function nama(){ 
-  var t = 0;
   const now = new Date();
   let hours = now.getHours();
   var minute = now.getMinutes(); 
