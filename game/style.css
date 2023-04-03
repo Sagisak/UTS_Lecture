@@ -20,7 +20,6 @@ body {
     display:flex;
     margin-left:auto;
     margin-right: auto;
-    border-radius: 50%;
 }
 
 #logo h1{
@@ -131,6 +130,10 @@ td{
     background-color: #ffb700;
     cursor: pointer;
     transform: scale(120%);
+}
+
+.button:active {
+    transform: scale(100%);
 }
 
 footer {
