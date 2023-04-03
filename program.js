@@ -1,4 +1,4 @@
-//Sliding Image Funtion
+// FUNCTION UNTUK SLIDE SLIDE GG GIMANK!
 
 let slideIndex = 1;
 showSlide(slideIndex);
@@ -15,6 +15,7 @@ function counter(n){
   } else if (n == 0){
     n = 4;
   }
+  id = document.getElementById("test").innerHTML = "1" + n;
   switch(n){
     case 1:
       localStorage.setItem("pet", "1");
@@ -31,7 +32,8 @@ function counter(n){
     default:
       localStorage.setItem("pet", "4");
       break;
-    }
+  }
+  id2 = document.getElementById("test2").innerHTML = "1" + localStorage.getItem("pet");
   }
 
   function pictureprint(){
@@ -77,7 +79,20 @@ function showSlide(n) {
 }
 
 
-// Ended Here
+
+/*
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+  changeSlide(-1);
+});
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+  changeSlide(1);
+});
+
+*/
+
+// SELESAI DISINI! HEHE
 
 lv = 1
 loop = 1;
@@ -96,14 +111,9 @@ function addZero(i) {
 
 
 function nama(){ 
-  var backgroundimages = new Array(
-    '/images/morning.jpg',
-    '/images/daylight.jpg',
-    '/images/evening.jpg',
-  );
   var t = 0;
   const now = new Date();
-  let hours = now.getHours();
+  let hours = addZero(now.getHours());
   var minute = now.getMinutes(); 
   namaprocess();
   setInterval(namaprocess, 1000);
@@ -132,47 +142,32 @@ function nama(){
     }
 
     var timestring = hourprint +" : " + printminute;
-    if (hours >= 6 && hours  < 17){
-      time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
-      time = document.getElementById("time").style.fontWeight='bold';
-      time = document.getElementById("time").style.fontSize='30px';
-    } else {
-      time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
-      time = document.getElementById("time").style.fontWeight='bold';
-      time = document.getElementById("time").style.fontSize='30px';
-      time = document.getElementById("time").style.color='white';
-    }
-    if (hours >= 6 && hours < 12){
+   
+    time = document.getElementById("time").innerHTML="<center> " + timestring + "</center>";
+    time = document.getElementById("time").style.fontWeight='bold';
+    time = document.getElementById("time").style.fontSize='30px';
+    if (hours >= 0 && hours < 12){
       introduce = document.getElementById("nama").innerHTML="<center>Good Morning, "+ localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
-      introduce =  document.getElementById("nama").style.fontSize='25px';
-      var body = document.getElementsByTagName("body")[0].setAttribute('style', 'background-image: url("'+backgroundimages[0]+'")');
+      introduce =  document.getElementById("nama").style.fontSize='50px';
     } else if (hours >= 12 && hours  < 17){
       introduce = document.getElementById("nama").innerHTML="<center>Good Afternoon, " + localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
       introduce =  document.getElementById("nama").style.fontSize='25px';
-      var body = document.getElementsByTagName("body")[0].setAttribute('style', 'background-image: url("'+backgroundimages[1]+'")');
-    } else {
+      introduce =  document.getElementById("nama").style.fontSize='50px';
+    } else if (hours >= 17 && hours <= 23) {
       introduce = document.getElementById("nama").innerHTML="<center>Good Evening, " + localStorage.getItem("nama") + "!</center>";
       introduce =  document.getElementById("nama").style.fontFamily='Cursive';
       introduce =  document.getElementById("nama").style.fontWeight='bold';
-      introduce =  document.getElementById("nama").style.fontSize='25px';
-      introduce =  document.getElementById("nama").style.color='white';
-      var body = document.getElementsByTagName("body")[0].setAttribute('style', 'background-image: url("'+backgroundimages[2]+'")');
+      introduce =  document.getElementById("nama").style.fontSize='50px';
     }
     
   }
   
   
 }
-
-
-sisa1 = document.getElementById("sisa1"); //play
-sisa2 = document.getElementById("sisa2"); //bath
-sisa3 = document.getElementById("sisa3"); //sleep
-sisa4 = document.getElementById("sisa4"); //eat
 
 function game(){
     j = 3;
@@ -227,36 +222,38 @@ function game(){
 
 }
 
-var id;
-
 function statusbar(){
   var i =0;
+  sisa1 = document.getElementById("sisa1"); //play
+  sisa2 = document.getElementById("sisa2"); //bath
+  sisa3 = document.getElementById("sisa3"); //sleep
+  sisa4 = document.getElementById("sisa4"); //eat
   width1 = 150;
   width2 = 150;
   width3 = 150;
   width4 = 150;
-  id = setInterval(framekurang, 8000); 
-  
+  var id = setInterval(framekurang, 3000); 
 }
 
 function framekurang(){
-  if (parseInt(sisa1.style.width) <= 0 || parseInt(sisa2.style.width) <= 0 || parseInt(sisa3.style.width = width3) <= 0 || parseInt(sisa4.style.width) <= 0){
+  if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
     clearInterval(id);
-    window.alert("LU RUSAK!");
-    window.location.replace("/home/main.html");
-  } 
-  else {
+
+  } else {
     width1--;
     width2--;
     width3--;
     width4--;
-  
+
     sisa1.style.width = width1 + "px"; //play
     sisa2.style.width = width2 + "px"; //bath
     sisa3.style.width = width3 + "px"; //sleep
     sisa4.style.width = width4 + "px"; //eat
   }
 }
+
+
+
 
 
 
@@ -273,30 +270,23 @@ function level(){
 
 }
 
-
-
-function eating(){  
-  if (width4 + 20 >= 200){
+function eating(){
+  sisa4 = document.getElementById("sisa4");
+  
+  if (width4 + 20 > 200){
     sisa4.style.width = 200 + 'px';
     return;
   }
 
   width4+= 20;
   sisa4.style.width = width4 + "px";
-  
-  width3-= 5;
-  sisa3.style.width = width3 + "px";
-
-  width2-= 10;
-  sisa2.style.width = width2 + "px";
-
-  width1-= 10;
-  sisa1.style.width = width1 + "px";
   return;
 }
 
 function sleeping(){
-  if (width3 + 20 >= 200){
+  sisa3 = document.getElementById("sisa3"); //sleep
+
+  if (width3 + 20> 200){
     sisa3.style.width = 200 + 'px';
     return;
   }
@@ -304,19 +294,20 @@ function sleeping(){
   width3+= 20;
   sisa3.style.width = width3 + "px";
 
-  width4-=10;
-  sisa4.style.width = width4 + "px";  
   return;
 }
 
 function bath(){
-  if (width2 + 20 >= 200){
+  sisa2 = document.getElementById("sisa2"); //bath
+
+  if (width2 + 20 > 200){
     sisa2.style.width = 200 + 'px';
     return;
   }
 
   width2+= 20;
   sisa2.style.width = width2 + "px";
+
   return;
 }
 
@@ -333,6 +324,7 @@ function sound(){
 
 /* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
 function gameRaihBintang(){
+  sisa1 = document.getElementById("sisa1");
   var containergame = document.getElementById("container-game");
   containergame.style.display = "block";
 
@@ -367,7 +359,7 @@ function gameRaihBintang(){
 
       setTimeout(() => {
           star.style.opacity = 0;
-      }, 2000);
+      }, 500);
 
       star.style.left = parseInt(star.style.left) + (moveBy * randomNumberX) + 'px';
       star.style.top = parseInt(star.style.top) + (moveBy * randomNumberY) + 'px';
@@ -460,6 +452,7 @@ function gameRaihBintang(){
       document.getElementById("posStar").innerHTML = "STAR = X AXIS:" + parseInt(sl) + " Y AXIS:" + parseInt(st);
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
+
   
 }
 
