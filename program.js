@@ -321,7 +321,7 @@ function level(){
   function levelprocess(){
   time = time + 1;
   if (time == 280){
-    new_level = document.getElementById("level").innerHTML = "<b><center>the dead!</center></b>";
+    new_level = document.getElementById("level").innerHTML = "<b><center>THE DEAD! leve " + lv +" </center></b>";
     fk = setInterval(framekurang, 200); //100
   }
   else if (time == 120){
