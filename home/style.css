@@ -11,15 +11,17 @@
 #c5f0e9
 */
 
-.body {
+body {
     font-family:arial;
-    margin: 0;
+    background-image: url("/images//menu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #header {
     font-family: 'Delicious Handrawn', cursive;
     height: 10em;
-    background: linear-gradient(to bottom, #3c828d 0%, #63a99e 100%);
+/*    background: linear-gradient(to bottom, #3c828d 0%, #63a99e 100%); */
 }
 
 #header img{
@@ -34,6 +36,7 @@
     text-align: center;
     margin: auto;
     padding: 0.3em;
+    font-size: 40px;
 }
 
 
@@ -45,7 +48,6 @@
 
     padding-top: 1em;
     padding-bottom: 1em;
-    background: linear-gradient(to bottom, #63a99e 0%, #9fddd2 100%);
     
 }
 
@@ -133,7 +135,7 @@ button:hover:after {
     margin: 0em auto;
     padding-top: 0em;
     padding-bottom: 0em;
-    background: linear-gradient(to bottom, #9fddd2 0%, #ffffff 100%);
+ 
     height: 10em;
 }
 
