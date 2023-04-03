@@ -316,19 +316,19 @@ function level(){
   var time = 0;
   var lv = 1;
   levelprocess();
-  setInterval(levelprocess, 10000); // 1000
+  setInterval(levelprocess, 1000); // 1000
 
   function levelprocess(){
   time = time + 1;
-  if (time == 720){
+  if (time == 280){
     new_level = document.getElementById("level").innerHTML = "<b><center>the dead!</center></b>";
     fk = setInterval(framekurang, 200); //100
   }
-  else if (time == 20){
+  else if (time == 120){
       lv += 1;
       new_level = document.getElementById("level").innerHTML ="<b><center>level " + lv + "</center></b>";
       fk = setInterval(framekurang, 400); //200
-  } else if (time == 3){
+  } else if (time == 40){
     lv += 1;
     new_level = document.getElementById("level").innerHTML ="<b><center>level " + lv + "</center></b>";
     fk = setInterval(framekurang, 1000); //500
@@ -476,11 +476,11 @@ function eating(){
   sisa4.style.width = width4 + "px";
   
   //mengurangi mandi di status bar
-  width2-= 15;
+  width2-= 10;
   sisa2.style.width = width2 + "px";
 
   //mengurangi main di status bar
-  width1-= 10;
+  width1-= 5;
   sisa1.style.width = width1 + "px";
 
   
@@ -530,9 +530,9 @@ function sleeping(){
 
 
   width3+= 20; //tidur namba status
-  width4-= 15; //makan kurang status
-  width1-= 15; //main  kurang status
-  width2-= 5;  //mandi kurang status
+  width4-= 10; //makan kurang status
+  width1-= 5; //main  kurang status
+  width2-= 2;  //mandi kurang status
 
   sisa1.style.width = width1 + "px"; //play
   sisa2.style.width = width2 + "px"; //bath
@@ -584,9 +584,9 @@ avatar.appendChild(tagimg);
   }
   
   width2+= 20; //mandi kurang status
-  width3-= 10; //tidur namba status
-  width4-= 10; //makan kurang status
-  width1-= 10; //main  kurang status
+  width3-= 5; //tidur namba status
+  width4-= 5; //makan kurang status
+  width1-= 5; //main  kurang status
 
   sisa1.style.width = width1 + "px"; //play
   sisa2.style.width = width2 + "px"; //bath
@@ -756,7 +756,7 @@ function gameRaihBintang(){
           sisa2 = document.getElementById("sisa2");
           sisa3 = document.getElementById("sisa3");
           sisa4 = document.getElementById("sisa4");
-          width1+= point * 5;
+          width1+= point * 7;
 
           if(parseInt(sisa1.style.width) + (point*3) >= 200 ){
             width1 = 200;
@@ -765,9 +765,9 @@ function gameRaihBintang(){
           else{
             sisa1.style.width = width1 + "px";
           }
-          width2 -= 10;
-          width3 -= 15;
-          width4 -= 20;
+          width2 -= 2;
+          width3 -= 5;
+          width4 -= 10;
 
           sisa2.style.width = width2 + 'px';
           sisa3.style.width = width3 + 'px';
