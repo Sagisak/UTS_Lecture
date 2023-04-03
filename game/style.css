@@ -159,6 +159,7 @@ footer {
     border: 1px solid black;
     display: none;
     position: relative;
+    background-color: rgb(194, 194, 194);
 }
 
 #circle{
