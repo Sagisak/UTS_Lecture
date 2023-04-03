@@ -615,7 +615,7 @@ function gameRaihBintang(){
   petkita = document.getElementById("petimage").style.marginLeft = "auto";
   petkita = document.getElementById("petimage").style.marginRight = "auto";
 
-  setTimeout(gantidefault,15000);
+  setTimeout(gantidefault,30000);
 
 
   var containergame = document.getElementById("container-game");
@@ -625,6 +625,36 @@ function gameRaihBintang(){
   
 
   var circle = document.getElementById("circle");
+  tagimg2 = document.createElement("img");
+  tagimg2.id= ("petplayer");
+  switch(dataImage){
+    case "1":
+      tagimg2.src = "/images/rubah/main.png";
+      break;
+    case "2":
+      tagimg2.src = "/images/babi/main.png";
+      break;
+    case "3":
+      tagimg2.src = "/images/kambing/main.png";
+      break;
+    case "4":
+      tagimg2.src = "/images/panda/main.png";
+      break;
+    default :
+    tagimg2.src = "/images/avatar4.png";
+    break;
+
+  }
+  circle.appendChild(tagimg2);
+
+  petmain = document.getElementById("petplayer").style.width = "200px";
+  petmain = document.getElementById("petplayer").style.marginLeft = "-50px";
+  petmain = document.getElementById("petplayer").style.marginTop = "-50px";
+  
+
+  
+  
+
   var star = document.getElementById("star");
 
   circle.style.left = 0;
@@ -639,6 +669,8 @@ function gameRaihBintang(){
   let st = 0;
 
   let moveBy = 125;
+
+  
 
   function starNewPos(){
       var moveBy = 125;
@@ -709,6 +741,9 @@ function gameRaihBintang(){
           sisa2.style.width = width2 + 'px';
           sisa3.style.width = width3 + 'px';
           sisa4.style.width = width4 + 'px';
+
+          
+          circle.removeChild(circle.firstElementChild);
 
 
           return;
