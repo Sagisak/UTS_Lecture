@@ -572,6 +572,10 @@ avatar.appendChild(tagimg);
   return;
 }
 
+function play(){
+  gameRaihBintang();
+}
+
 
 function sound(){
   var buttonSound = document.getElementById("button-sound");
@@ -585,6 +589,8 @@ function sound(){
 
 /* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
 function gameRaihBintang(){
+
+  
   avatar = document.getElementById("avatar");
   avatar.removeChild(avatar.firstElementChild);
   var dataImage = localStorage.getItem("pet");
@@ -650,10 +656,8 @@ function gameRaihBintang(){
   petmain = document.getElementById("petplayer").style.width = "200px";
   petmain = document.getElementById("petplayer").style.marginLeft = "-50px";
   petmain = document.getElementById("petplayer").style.marginTop = "-50px";
-  
 
-  
-  
+
 
   var star = document.getElementById("star");
 
@@ -673,7 +677,6 @@ function gameRaihBintang(){
   
 
   function starNewPos(){
-      var moveBy = 125;
       star.style.opacity = 1;
       sl = 0;
       st = 0;
@@ -727,7 +730,7 @@ function gameRaihBintang(){
           sisa4 = document.getElementById("sisa4");
           width1+= point * 3;
 
-          if(parseInt(sisa1.style.width) + point >= 200 ){
+          if(parseInt(sisa1.style.width) + (point*3) >= 200 ){
             width1 = 200;
             sisa1.style.width = width1 + 'px';
           }
@@ -751,47 +754,69 @@ function gameRaihBintang(){
 
   }, 1000); // 1000 milliseconds = 1 second
 
-  function circleMovements(e){
-      switch(e.key){
-          case 'a':
-              circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
-              cl = parseInt(cl) - 1;
-              break;
-          case 'A':
-              circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
-              cl = parseInt(cl) - 1;
-              break;
-          case 'd':
-              circle.style.left = parseInt(circle.style.left) + moveBy + 'px';
-              cl = parseInt(cl) + 1;
-              break;
-          case 'D':
-              circle.style.left = parseInt(circle.style.left) + moveBy + 'px';
-              cl = parseInt(cl) + 1;
-              break;
-          case 'w':
-              circle.style.top = parseInt(circle.style.top) - moveBy + 'px';
-              ct = parseInt(ct) - 1;
-              break;
-          case 'W':
-              circle.style.top = parseInt(circle.style.top) - moveBy + 'px';
-              ct = parseInt(ct) - 1;
-              break;
-          case 's':
-              circle.style.top = parseInt(circle.style.top) + moveBy + 'px';
-              ct = parseInt(ct) + 1;
-              break; 
-          case 'S':
-              circle.style.top = parseInt(circle.style.top) + moveBy + 'px';
-              ct = parseInt(ct) + 1;
-              break; 
+function circleMovements(e){
+  switch(e.key){
+    case 'a':
+      if (cl - 1 >= 0){
+        circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
+        cl = parseInt(cl) - 1;
       }
+      break;
+    case 'A':
+      if (cl - 1 >= 0){
+        circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
+        cl = parseInt(cl) - 1;
+      }
+      break;
 
-      if(cl == sl && ct == st){
-          starNewPos();
-          point = parseInt(point) + 1;
+    case 'd':
+      if (cl + 1 <= 11){
+        circle.style.left = parseInt(circle.style.left) + moveBy + 'px';
+        cl = parseInt(cl) + 1;
       }
-      updateCoor(); 
+      break;
+    case 'D':
+      if (cl + 1 <= 11){
+        circle.style.left = parseInt(circle.style.left) + moveBy + 'px';
+        cl = parseInt(cl) + 1;
+      }
+      break;
+
+    case 'w':
+      if (ct - 1 >= 0){
+        circle.style.top = parseInt(circle.style.top) - moveBy + 'px';
+        ct = parseInt(ct) - 1;
+      }
+      break;
+    case 'W':
+      if (ct - 1 >= 0){
+        circle.style.top = parseInt(circle.style.top) - moveBy + 'px';
+        ct = parseInt(ct) - 1;
+      }
+      break;
+
+    case 's':
+      if (ct + 1 <= 5){
+        circle.style.top = parseInt(circle.style.top) + moveBy + 'px';
+        ct = parseInt(ct) + 1;
+      }
+      break; 
+    case 'S':
+      if (ct + 1 <= 5){
+      circle.style.top = parseInt(circle.style.top) + moveBy + 'px';
+      ct = parseInt(ct) + 1;
+      }
+      break; 
+  }
+
+  console.log(ct);
+  console.log(cl);
+
+  if(cl == sl && ct == st){
+      starNewPos();
+      point = parseInt(point) + 1;
+  }
+  updateCoor(); 
   }
   window.addEventListener('keyup', circleMovements);
 
