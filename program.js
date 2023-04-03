@@ -49,16 +49,16 @@ function counter(n){
     tagimg.id= ("petimage");
     switch(dataImage){
       case "1":
-        tagimg.src = "/images/biasa.png";
+        tagimg.src = "/images/rubah/default.png";
         break;
       case "2":
-        tagimg.src = "/images/biasa2.png";
+        tagimg.src = "/images/babi/default.png";
         break;
       case "3":
-        tagimg.src = "/images/avatar3.png";
+        tagimg.src = "/images/kambing/default.png";
         break;
       case "4":
-        tagimg.src = "/images/avatar4.png";
+        tagimg.src = "/images/panda/default.png";
         break;
       default :
       tagimg.src = "/images/avatar4.png";
