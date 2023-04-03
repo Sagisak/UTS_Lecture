@@ -322,10 +322,13 @@ function level(){
   time = time + 1;
   if (time == 280){
     lv += 1
-    new_level = document.getElementById("level").innerHTML = "<b><center>THE DEAD! level " + lv +" </center></b>";
-    fk = setInterval(framekurang, 300); //100
+    new_level = document.getElementById("level");
+    new_level.removeChild(list.firstElementChild);
+    new_level = document.getElementById("level").innerHTML = "<b><center>THE DEAD!</center></b>";
+
+    fk = setInterval(framekurang, 340); //100
   }
-  else if (time == 120){
+  else if (time == 150){
       lv += 1;
       new_level = document.getElementById("level").innerHTML ="<b><center>level " + lv + "</center></b>";
       fk = setInterval(framekurang, 400); //200
