@@ -159,11 +159,7 @@ function nama(){
 }
 
 
-sisa1 = document.getElementById("sisa1"); //play
-sisa2 = document.getElementById("sisa2"); //bath
-sisa3 = document.getElementById("sisa3"); //sleep
-sisa4 = document.getElementById("sisa4"); //eat
-var time;
+
 
 // function game(){
 //     j = 3;
@@ -218,23 +214,30 @@ var time;
 
 // }
 
+sisa1 = document.getElementById("sisa1"); //play
+sisa2 = document.getElementById("sisa2"); //bath
+sisa3 = document.getElementById("sisa3"); //sleep
+sisa4 = document.getElementById("sisa4"); //eat
+var time;
+
+
 function statusbar(){
   var i =0;
-  sisa1 = document.getElementById("sisa1"); //play
-  sisa2 = document.getElementById("sisa2"); //bath
-  sisa3 = document.getElementById("sisa3"); //sleep
-  sisa4 = document.getElementById("sisa4"); //eat
   width1 = 150;
   width2 = 150;
   width3 = 150;
   width4 = 150;
-  id = setInterval(framekurang, 1000); 
+  fk = setInterval(framekurang, 100);
   
 }
 
 function framekurang(){
   if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
-    clearInterval(id);
+    clearInterval(fk);
+    alert("Game Over111");
+    return;
+    // alert("game over");
+    // location.replace("/home/main.html");
 
   } else {
     width1--;
@@ -253,22 +256,22 @@ function level(){
   var time = 0;
   var lv = 1;
   levelprocess();
-  setInterval(levelprocess, 1000);
+  setInterval(levelprocess, 100); // 1000
 
   function levelprocess(){
   time = time + 1;
   if (time == 720){
     new_level = document.getElementById("level").innerHTML = "<b><center>the dead!</center></b>";
-    id = setInterval(framekurang, 100);
+    fk = setInterval(framekurang, 100); //100
   }
   else if (time == 20){
       lv += 1;
       new_level = document.getElementById("level").innerHTML ="<b><center>level " + lv + "</center></b>";
-      id = setInterval(framekurang, 200);
+      fk = setInterval(framekurang, 100); //200
   } else if (time == 3){
     lv += 1;
     new_level = document.getElementById("level").innerHTML ="<b><center>level " + lv + "</center></b>";
-    id = setInterval(framekurang, 500);
+    fk = setInterval(framekurang, 100); //500
   } else{
     new_level = document.getElementById("level").innerHTML = "<b><center>level " + lv + "</center></b>";
   }
@@ -342,10 +345,11 @@ function sound(){
 
 /* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
 function gameRaihBintang(){
-  sisa1 = document.getElementById("sisa1");
   var containergame = document.getElementById("container-game");
-  containergame.scrollIntoView({ behavior: "smooth", block: "start", inline:"start"});
   containergame.style.display = "block";
+  window.scrollBy(0, 650);
+  containergame.scrollIntoView({ behavior: "smooth", block: "start", inline:"start"});
+
 
   var circle = document.getElementById("circle");
   var star = document.getElementById("star");
@@ -471,5 +475,4 @@ function gameRaihBintang(){
       document.getElementById("posStar").innerHTML = "STAR = X AXIS:" + parseInt(sl) + " Y AXIS:" + parseInt(st);
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
-
 }
