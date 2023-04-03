@@ -161,6 +161,7 @@ function nama(){
   
 }
 
+<<<<<<< HEAD
 
 sisa1 = document.getElementById("sisa1"); //play
 sisa2 = document.getElementById("sisa2"); //bath
@@ -168,6 +169,8 @@ sisa3 = document.getElementById("sisa3"); //sleep
 sisa4 = document.getElementById("sisa4"); //eat
 var time;
 
+=======
+>>>>>>> 6a8fefd650a3651b23dea99568446b01a69ac644
 // function game(){
 //     j = 3;
 //     l = 4;
@@ -253,6 +256,13 @@ function framekurang(){
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 6a8fefd650a3651b23dea99568446b01a69ac644
 function level(){
   var time = 0;
   var lv = 1;
@@ -476,5 +486,9 @@ function gameRaihBintang(){
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
 
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 6a8fefd650a3651b23dea99568446b01a69ac644
 }
 
