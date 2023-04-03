@@ -161,15 +161,6 @@ function nama(){
   
 }
 
-<<<<<<< HEAD
-function game(){
-    j = 3;
-    l = 4;
-    f = 2;
-    menu = document.getElementById("menu");
-    boxinput = document.getElementById("boxInput");
-    gameplay = document.getElementById("gameplay");
-=======
 
 sisa1 = document.getElementById("sisa1"); //play
 sisa2 = document.getElementById("sisa2"); //bath
@@ -184,7 +175,6 @@ var time;
 //     menu = document.getElementById("menu");
 //     boxinput = document.getElementById("boxInput");
 //     gameplay = document.getElementById("gameplay");
->>>>>>> 10febc8671b2fe1c144184ec7f129a4b47712338
 
 
 //     while(menu.hasChildNodes()){
@@ -241,12 +231,8 @@ function statusbar(){
   width2 = 150;
   width3 = 150;
   width4 = 150;
-<<<<<<< HEAD
-  var id = setInterval(framekurang, 3000); 
-=======
   id = setInterval(framekurang, 1000); 
   
->>>>>>> 10febc8671b2fe1c144184ec7f129a4b47712338
 }
 
 function framekurang(){
@@ -267,13 +253,6 @@ function framekurang(){
 }
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 10febc8671b2fe1c144184ec7f129a4b47712338
 function level(){
   var time = 0;
   var lv = 1;
@@ -303,12 +282,6 @@ function level(){
 
 }
 
-<<<<<<< HEAD
-function eating(){
-  sisa4 = document.getElementById("sisa4");
-  
-  if (width4 + 20 > 200){
-=======
 //For Diabling Button for 3 seconds
 // const buttonAct = document.getElementById("button-act");
 // function disableButton(input) {
@@ -323,7 +296,6 @@ function eating(){
 
 function eating(){
   if (width4 + 20 >= 200){
->>>>>>> 10febc8671b2fe1c144184ec7f129a4b47712338
     sisa4.style.width = 200 + 'px';
     return;
   }
@@ -504,9 +476,5 @@ function gameRaihBintang(){
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
 
-<<<<<<< HEAD
-  
-=======
->>>>>>> 10febc8671b2fe1c144184ec7f129a4b47712338
 }
 
