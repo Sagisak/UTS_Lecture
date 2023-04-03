@@ -99,6 +99,7 @@ body {
     transition: all 0.5s;
 }
 
+
 #menu button:hover:after {
     transform: skewX(-45deg) scale(1, 1);
     -webkit-transition: all 0.5s;
