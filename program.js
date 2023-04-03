@@ -15,7 +15,6 @@ function counter(n){
   } else if (n == 0){
     n = 4;
   }
-  id = document.getElementById("test").innerHTML = "1" + n;
   switch(n){
     case 1:
       localStorage.setItem("pet", "1");
@@ -33,12 +32,10 @@ function counter(n){
       localStorage.setItem("pet", "4");
       break;
   }
-  id2 = document.getElementById("test2").innerHTML = "1" + localStorage.getItem("pet");
   }
 
   function pictureprint(){
     avatar = document.getElementById("avatar");
-    
     var dataImage = localStorage.getItem("pet");
     tagimg = document.createElement("img");
     tagimg.id= ("petimage");
