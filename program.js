@@ -728,7 +728,7 @@ function gameRaihBintang(){
   updateCoor();
 
   // Set the starting time in seconds
-  var timeLeft = 8;
+  var timeLeft = 7;
 
   // Get a reference to the timer element
   var timerEl = document.getElementById("timer");
@@ -753,9 +753,9 @@ function gameRaihBintang(){
           sisa2 = document.getElementById("sisa2");
           sisa3 = document.getElementById("sisa3");
           sisa4 = document.getElementById("sisa4");
-          width1+= point * 8;
+          width1+= point * 10;
 
-          if(parseInt(sisa1.style.width) + (point*8) >= 200 ){
+          if(parseInt(sisa1.style.width) + (point*9) >= 200 ){
             width1 = 200;
             sisa1.style.width = width1 + 'px';
           }
