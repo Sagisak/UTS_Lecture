@@ -9,6 +9,14 @@ function changeSlide(n) {
   counter(slideIndex);
 }
 
+function gameover(){
+  var id = localStorage.getItem("over");
+  if (id == "1"){
+    window.alert("Game Over!");
+    id == localStorage.setItem("over", "0");
+  }
+}
+
 function counter(n){
   if (n > 4){
     n = 1;
@@ -233,8 +241,9 @@ function statusbar(){
 
 function framekurang(){
   if (width1 <= 0 || width2 <= 0 || width3 <= 0 || width4 <= 0){
+    id = localStorage.setItem("over", "1");
     clearInterval(fk);
-    alert("Game Over111");
+    window.location.replace("/home/main.html");
     return;
     // alert("game over");
     // location.replace("/home/main.html");
