@@ -252,7 +252,6 @@ function framekurang(){
   }
 }
 
-
 function level(){
   var time = 0;
   var lv = 1;
@@ -476,6 +475,4 @@ function gameRaihBintang(){
       document.getElementById("point").innerHTML = "Point = " + parseInt(point);
   }
 
-  
 }
-
