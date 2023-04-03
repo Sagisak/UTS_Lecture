@@ -471,14 +471,22 @@ function eating(){
     return;
   }
 
+  //menambah makan di status bar
   width4+= 20;
   sisa4.style.width = width4 + "px";
+  
+  //mengurangi mandi di status bar
+  width2-= 15;
+  sisa2.style.width = width2 + "px";
+
+  //mengurangi main di status bar
+  width1-= 10;
+  sisa1.style.width = width1 + "px";
+
+  
+  
   setTimeout(gantidefault, 2000);
-
-  
   return;
-  
-
 }
 
 function sleeping(){
@@ -588,6 +596,11 @@ function sound(){
 /* INI FUNCTION GAME NYARI2 BINTANG!!! PADALAH DI TAMPILANNYA ITU KOTAK HEHE*/
 function gameRaihBintang(){
 
+  alert("Gapai Bola dengan menggunakan WASD secepat-cepatnya!");
+  alert("Bola akan menghilang setelah bola berpindah");
+  alert("3");
+  alert("2");
+  alert("1");
   
   avatar = document.getElementById("avatar");
   avatar.removeChild(avatar.firstElementChild);
