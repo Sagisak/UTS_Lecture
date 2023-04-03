@@ -701,7 +701,7 @@ function gameRaihBintang(){
   updateCoor();
 
   // Set the starting time in seconds
-  var timeLeft = 15;
+  var timeLeft = 5;
 
   // Get a reference to the timer element
   var timerEl = document.getElementById("timer");
